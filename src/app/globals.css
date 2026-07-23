@@ -1,26 +1,150 @@
 @import "tailwindcss";
 
+/* ---------- Sinapsyc brand theme ---------- */
+@theme {
+  /* Brand palette — taken from the logo synapses */
+  --color-teal-50: #ecfbf9;
+  --color-teal-100: #cff5f0;
+  --color-teal-200: #a3ebe3;
+  --color-teal-400: #35c4bc;
+  --color-teal-500: #23b3aa;
+  --color-teal-600: #148f88;
+
+  --color-sky-brand-100: #dcefff;
+  --color-sky-brand-300: #8fc7f2;
+  --color-sky-brand-500: #4fa3e3;
+  --color-sky-brand-600: #2f83c6;
+
+  --color-sun-100: #fff2d6;
+  --color-sun-300: #ffd579;
+  --color-sun-400: #f9c04a;
+  --color-sun-500: #f5a623;
+
+  --color-bubble-100: #ffe1ef;
+  --color-bubble-300: #ff9fc7;
+  --color-bubble-500: #f06ba8;
+  --color-bubble-600: #d94b8c;
+
+  --color-cream: #fff9f0;
+  --color-cream-deep: #fdf1e3;
+  --color-ink: #384150;
+  --color-ink-soft: #5b6472;
+
+  --font-display: var(--font-fredoka);
+  --font-body: var(--font-nunito);
+
+  --radius-blob: 42% 58% 63% 37% / 41% 44% 56% 59%;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float 9s ease-in-out infinite;
+  --animate-wiggle: wiggle 3s ease-in-out infinite;
+  --animate-bob: bob 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+@keyframes bob {
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fff9f0;
+  --foreground: #384150;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* Reveal-on-scroll */
+.reveal {
+  opacity: 0;
+}
+.reveal.is-visible {
+  animation: reveal-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal.is-visible { opacity: 1; animation: none; }
+  html { scroll-behavior: auto; }
+  [class*="animate-"] { animation: none !important; }
+}
+
+/* Soft blob decorations */
+.blob {
+  border-radius: var(--radius-blob);
+}
+
+/* Dotted synapse connector background */
+.dot-grid {
+  background-image: radial-gradient(rgba(53, 196, 188, 0.18) 2px, transparent 2px);
+  background-size: 28px 28px;
+}
+
+/* Fancy underline for links */
+.link-underline {
+  background-image: linear-gradient(transparent 60%, var(--color-sun-300) 0);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease;
+}
+.link-underline:hover {
+  background-size: 100% 100%;
+}
+
+/* Markdown article styling */
+.prose-sinapsyc {
+  color: var(--color-ink-soft);
+  line-height: 1.8;
+  font-size: 1.075rem;
+}
+.prose-sinapsyc h2 {
+  color: var(--color-teal-600);
+  font-size: 1.7rem;
+  margin: 2.2rem 0 0.9rem;
+}
+.prose-sinapsyc h3 {
+  color: var(--color-ink);
+  font-size: 1.3rem;
+  margin: 1.6rem 0 0.6rem;
+}
+.prose-sinapsyc p { margin: 0 0 1.15rem; }
+.prose-sinapsyc ul { margin: 0 0 1.15rem; padding-left: 1.3rem; list-style: none; }
+.prose-sinapsyc ul li { position: relative; margin: 0.4rem 0; padding-left: 1.4rem; }
+.prose-sinapsyc ul li::before {
+  content: "";
+  position: absolute; left: 0; top: 0.65em;
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--color-bubble-500);
+}
+.prose-sinapsyc ol { margin: 0 0 1.15rem; padding-left: 1.5rem; }
+.prose-sinapsyc a { color: var(--color-sky-brand-600); font-weight: 700; text-decoration: underline; }
+.prose-sinapsyc strong { color: var(--color-ink); }
+.prose-sinapsyc blockquote {
+  border-left: 5px solid var(--color-sun-400);
+  background: var(--color-sun-100);
+  border-radius: 0 1rem 1rem 0;
+  padding: 0.6rem 1.2rem; margin: 1.4rem 0; font-style: italic;
 }
