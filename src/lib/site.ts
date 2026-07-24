@@ -6,7 +6,7 @@ export const site = {
     "Centro de neurodesarrollo infantil en Guadalajara. Acompañamos a las familias y potenciamos el desarrollo y bienestar de cada niño de 0 a 8 años.",
   url: "https://sinapsyc.com.mx",
   phoneDisplay: "33 3461 0814",
-  whatsapp: "5213334610814", // wa.me format (México)
+  whatsapp: "523334610814", // wa.me format (México, sin el 1)
   email: "hola@sinapsyc.com.mx",
   address: {
     street: "Juan Zubarán #1990",
