@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { programs, site, waLink } from "@/lib/site";
 import { WhatsAppIcon } from "./ui";
 
@@ -91,6 +92,22 @@ export default function ContactForm() {
           ))}
         </select>
       </div>
+
+      <label className="flex items-start gap-3 rounded-2xl bg-teal-50 p-4 text-sm leading-relaxed text-ink-soft">
+        <input
+          type="checkbox"
+          required
+          name="consent"
+          className="mt-0.5 h-5 w-5 shrink-0 accent-teal-500"
+        />
+        <span>
+          He leído y acepto el{" "}
+          <Link href="/aviso-de-privacidad" className="font-700 text-teal-600 underline">
+            Aviso de Privacidad
+          </Link>
+          . <span className="text-bubble-500">*</span>
+        </span>
+      </label>
 
       <button
         type="submit"

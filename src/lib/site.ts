@@ -21,9 +21,11 @@ export const site = {
   // Google Maps embed query
   mapsQuery: "Juan Zubaran 1990, Jardines Alcalde, 44298 Guadalajara, Jalisco",
   social: {
-    facebook: "https://www.facebook.com/",
-    instagram: "https://www.instagram.com/",
+    facebook: "https://www.facebook.com/Sinapsyc/",
+    instagram: "https://www.instagram.com/_sinapsyc/",
+    youtube: "https://www.youtube.com/@sinapsycneurodesarrolloinf3299/playlists",
   },
+  privacyEmail: "privacidad@sinapsyc.com",
   googleProfile:
     "https://www.google.com/maps/place/Sinapsyc/data=!4m2!3m1!1s0x0:0x258b9ada80a4e79",
   directionsUrl: "https://maps.app.goo.gl/wsspNadHR5oF83up7",
@@ -38,8 +40,9 @@ export function waLink(message?: string) {
 export const nav = [
   { label: "Inicio", href: "/" },
   { label: "Nosotros", href: "/nosotros" },
-  { label: "Nuestro Enfoque", href: "/enfoque" },
+  { label: "Enfoque", href: "/enfoque" },
   { label: "Programas", href: "/programas" },
+  { label: "Admisión", href: "/admision" },
   { label: "Galería", href: "/galeria" },
   { label: "Preguntas", href: "/preguntas-frecuentes" },
   { label: "Blog", href: "/blog" },

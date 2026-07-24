@@ -20,6 +20,7 @@ es WhatsApp (${site.phoneDisplay}). No se requiere referencia médica para agend
 - [Nosotros](${site.url}/nosotros): quiénes somos, valores y certificaciones.
 - [Nuestro Enfoque](${site.url}/enfoque): proceso de valoración e intervención paso a paso.
 - [Programas](${site.url}/programas): índice de las ${programs.length} terapias.
+- [Admisión](${site.url}/admision): proceso de admisión y solicitud en línea.
 - [Preguntas Frecuentes](${site.url}/preguntas-frecuentes): ${faqs.length} respuestas para familias.
 - [Blog](${site.url}/blog): artículos sobre neurodesarrollo infantil.
 - [Ubicación](${site.url}/ubicacion): dirección, mapa y horarios.
