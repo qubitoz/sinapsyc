@@ -7,13 +7,24 @@ import Testimonials from "@/components/Testimonials";
 import BlogCard from "@/components/BlogCard";
 import CtaBand from "@/components/CtaBand";
 import PhotoCarousel from "@/components/PhotoCarousel";
-import { approach, programs, carouselPhotos, site, waLink } from "@/lib/site";
+import FaqAccordion from "@/components/FaqAccordion";
+import { approach, programs, carouselPhotos, faqs, site, waLink } from "@/lib/site";
 import { getAllPosts } from "@/lib/blog";
 import { colorMap } from "@/lib/colors";
 import { clsx } from "@/lib/clsx";
 
+const HOME_FAQS = [
+  "¿Cómo saber si mi hijo necesita terapia?",
+  "¿Necesito una referencia médica para agendar una cita?",
+  "¿Qué sucede en la primera cita de valoración?",
+  "¿A qué edad se recomienda iniciar terapia infantil?",
+];
+
 export default function Home() {
   const posts = getAllPosts().slice(0, 3);
+  const homeFaqs = HOME_FAQS.map((q) => faqs.find((f) => f.q === q)).filter(
+    (f): f is (typeof faqs)[number] => f !== undefined
+  );
 
   return (
     <>
@@ -290,6 +301,26 @@ export default function Home() {
               Léenos y déjanos tu reseña en Google
               <span aria-hidden>→</span>
             </a>
+          </div>
+        </Container>
+      </section>
+
+      {/* ---------------- FAQ EXCERPT ---------------- */}
+      <section className="bg-white py-16 sm:py-20">
+        <Container>
+          <SectionHeading
+            eyebrow="Preguntas frecuentes"
+            eyebrowClass="bg-bubble-100 text-bubble-600"
+            title="Las dudas más comunes de mamás y papás"
+            subtitle="Sabemos que surgen muchas preguntas. Aquí van las más frecuentes; el resto las respondemos con calma."
+          />
+          <div className="mt-12">
+            <FaqAccordion items={homeFaqs} defaultOpen={0} />
+          </div>
+          <div className="mt-10 text-center">
+            <Button href="/preguntas-frecuentes" variant="primary" size="lg">
+              Ver todas las preguntas frecuentes
+            </Button>
           </div>
         </Container>
       </section>

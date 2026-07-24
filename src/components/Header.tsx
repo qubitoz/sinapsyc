@@ -8,6 +8,12 @@ import { nav, site, waLink } from "@/lib/site";
 import { clsx } from "@/lib/clsx";
 import { WhatsAppIcon } from "./ui";
 
+// El header omite Inicio (accesible desde el logo) y Preguntas
+// (excerpt en el home + enlace directo en el footer).
+const headerNav = nav.filter(
+  (n) => n.href !== "/" && n.href !== "/preguntas-frecuentes"
+);
+
 export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -44,7 +50,7 @@ export default function Header() {
         </Link>
 
         <ul className="hidden items-center gap-1 lg:flex">
-          {nav.map((item) => {
+          {headerNav.map((item) => {
             const active =
               item.href === "/"
                 ? pathname === "/"
@@ -119,7 +125,7 @@ export default function Header() {
         )}
       >
         <ul className="flex flex-col gap-1 px-5 py-4">
-          {nav.map((item) => {
+          {headerNav.map((item) => {
             const active =
               item.href === "/"
                 ? pathname === "/"
