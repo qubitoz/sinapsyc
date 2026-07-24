@@ -7,11 +7,14 @@ import CtaBand from "@/components/CtaBand";
 import { approach } from "@/lib/site";
 import { colorMap } from "@/lib/colors";
 import { clsx } from "@/lib/clsx";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbSchema, medicalWebPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Nuestro Enfoque",
   description:
     "Un enfoque integral e interdisciplinario centrado en el niño y la familia. Conoce cómo trabajamos de la mano con padres, escuelas y profesionales de la salud.",
+  alternates: { canonical: "/enfoque" },
 };
 
 const faqEnfoque = [
@@ -28,6 +31,19 @@ const faqEnfoque = [
 export default function EnfoquePage() {
   return (
     <>
+      <JsonLd
+        data={[
+          medicalWebPageSchema(
+            "Nuestro Enfoque — Sinapsyc",
+            "Enfoque integral e interdisciplinario centrado en el niño y la familia.",
+            "/enfoque"
+          ),
+          breadcrumbSchema([
+            { name: "Inicio", path: "/" },
+            { name: "Nuestro Enfoque", path: "/enfoque" },
+          ]),
+        ]}
+      />
       <PageHero
         eyebrow="Nuestro enfoque"
         emoji="🧩"

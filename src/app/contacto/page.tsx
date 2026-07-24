@@ -5,16 +5,25 @@ import ContactForm from "@/components/ContactForm";
 import Reveal from "@/components/Reveal";
 import { site, waLink } from "@/lib/site";
 import { WhatsAppIcon } from "@/components/ui";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Agenda tu cita",
   description:
     "Agenda tu primera cita de valoración en Sinapsyc y recibe un beneficio especial al iniciar tu proceso. Estamos en Guadalajara, Jalisco.",
+  alternates: { canonical: "/contacto" },
 };
 
 export default function ContactoPage() {
   return (
     <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Inicio", path: "/" },
+          { name: "Agenda tu cita", path: "/contacto" },
+        ])}
+      />
       <PageHero
         eyebrow="Agenda tu cita"
         emoji="📅"

@@ -60,7 +60,7 @@ export const programs: Program[] = [
     title: "Terapia Ocupacional",
     short:
       "El juego como motor del aprendizaje: motricidad, atención, regulación y autonomía en el día a día.",
-    image: "/img/prog-ocupacional.jpg",
+    image: "/img/prog-ocupacional.png",
     color: "teal",
     emoji: "🦝",
     paragraphs: [
@@ -78,7 +78,7 @@ export const programs: Program[] = [
     title: "Terapia de Integración Sensorial",
     short:
       "Ayudamos a procesar mejor los sonidos, movimientos y texturas para una mayor participación en casa y la escuela.",
-    image: "/img/prog-sensorial.jpg",
+    image: "/img/prog-sensorial.png",
     color: "sky",
     emoji: "🐙",
     paragraphs: [
@@ -97,7 +97,7 @@ export const programs: Program[] = [
     title: "Terapia Física",
     short:
       "Fuerza, equilibrio, coordinación y movilidad para una mayor independencia y participación.",
-    image: "/img/prog-fisica.jpg",
+    image: "/img/prog-fisica.png",
     color: "sun",
     emoji: "🦘",
     paragraphs: [
@@ -115,7 +115,7 @@ export const programs: Program[] = [
     title: "Terapia de Alimentación",
     short:
       "Una relación saludable con los alimentos y el desarrollo de las habilidades orales para comer.",
-    image: "/img/prog-alimentacion.jpg",
+    image: "/img/prog-alimentacion.png",
     color: "bubble",
     emoji: "🦛",
     paragraphs: [
@@ -134,7 +134,7 @@ export const programs: Program[] = [
     title: "Terapia Conductual",
     short:
       "Herramientas prácticas para la conducta, la regulación emocional y las habilidades sociales.",
-    image: "/img/prog-conductual.jpg",
+    image: "/img/prog-conductual.png",
     color: "teal",
     emoji: "🦉",
     paragraphs: [
@@ -153,7 +153,7 @@ export const programs: Program[] = [
     title: "Terapia de Lenguaje",
     short:
       "Comunicación funcional, comprensión y expresión, con apoyos visuales cuando es oportuno.",
-    image: "/img/prog-lenguaje.jpg",
+    image: "/img/prog-lenguaje.png",
     color: "bubble",
     emoji: "🦜",
     paragraphs: [
@@ -172,7 +172,7 @@ export const programs: Program[] = [
     title: "Terapia de Aprendizaje",
     short:
       "Atención, memoria, lectoescritura y habilidades lógico-matemáticas para un mejor desempeño escolar.",
-    image: "/img/prog-aprendizaje.jpg",
+    image: "/img/prog-aprendizaje.png",
     color: "sky",
     emoji: "🦊",
     paragraphs: [
@@ -190,7 +190,7 @@ export const programs: Program[] = [
     title: "Intervención Temprana",
     short:
       "Para bebés con factores de riesgo o señales de alerta, en un ambiente cálido y seguro.",
-    image: "/img/prog-temprana.jpg",
+    image: "/img/prog-temprana.png",
     color: "sun",
     emoji: "🐣",
     paragraphs: [
@@ -209,7 +209,7 @@ export const programs: Program[] = [
     title: "Evaluación Neuropsicológica",
     short:
       "Conocemos cómo funciona el desarrollo cognitivo, emocional y conductual para diseñar un plan personalizado.",
-    image: "/img/prog-evaluacion.jpg",
+    image: "/img/prog-evaluacion.png",
     color: "sky",
     emoji: "🐘",
     paragraphs: [
@@ -228,7 +228,7 @@ export const programs: Program[] = [
     title: "Terapia Grupal",
     short:
       "Un espacio para desarrollar habilidades sociales, comunicación y regulación en grupos reducidos (máx. 5 niños).",
-    image: "/img/prog-grupal.jpg",
+    image: "/img/prog-grupal.png",
     color: "teal",
     emoji: "🐻",
     paragraphs: [
@@ -248,7 +248,7 @@ export const programs: Program[] = [
     title: "Clases de Psicomotricidad",
     short:
       "Aprender a través del movimiento y el juego: coordinación, equilibrio y conciencia corporal.",
-    image: "/img/prog-psicomotricidad.jpg",
+    image: "/img/prog-psicomotricidad.png",
     color: "sun",
     emoji: "🐵",
     paragraphs: [

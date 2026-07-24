@@ -6,11 +6,14 @@ import Reveal from "@/components/Reveal";
 import CtaBand from "@/components/CtaBand";
 import { colorMap } from "@/lib/colors";
 import { clsx } from "@/lib/clsx";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbSchema, medicalWebPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Acerca de Nosotros",
   description:
     "Sinapsyc es un centro de neurodesarrollo infantil en Guadalajara. Acompañamos familias y potenciamos el desarrollo y bienestar de cada niño con atención personalizada.",
+  alternates: { canonical: "/nosotros" },
 };
 
 const values = [
@@ -23,6 +26,19 @@ const values = [
 export default function NosotrosPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          medicalWebPageSchema(
+            "Acerca de Nosotros — Sinapsyc",
+            "Centro de neurodesarrollo infantil en Guadalajara con atención personalizada.",
+            "/nosotros"
+          ),
+          breadcrumbSchema([
+            { name: "Inicio", path: "/" },
+            { name: "Nosotros", path: "/nosotros" },
+          ]),
+        ]}
+      />
       <PageHero
         eyebrow="Acerca de nosotros"
         emoji="🌟"

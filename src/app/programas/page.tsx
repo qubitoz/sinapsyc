@@ -4,17 +4,41 @@ import PageHero from "@/components/PageHero";
 import ProgramCard from "@/components/ProgramCard";
 import Reveal from "@/components/Reveal";
 import CtaBand from "@/components/CtaBand";
-import { programs } from "@/lib/site";
+import { programs, site } from "@/lib/site";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Programas y Terapias",
   description:
     "Conoce todos los programas de Sinapsyc: terapia ocupacional, integración sensorial, lenguaje, física, alimentación, conductual, aprendizaje, intervención temprana y más.",
+  alternates: { canonical: "/programas" },
 };
 
 export default function ProgramasPage() {
+  const itemList = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Programas de neurodesarrollo infantil de Sinapsyc",
+    itemListElement: programs.map((p, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: p.title,
+      url: `${site.url}/programas/${p.slug}`,
+    })),
+  };
+
   return (
     <>
+      <JsonLd
+        data={[
+          itemList,
+          breadcrumbSchema([
+            { name: "Inicio", path: "/" },
+            { name: "Programas", path: "/programas" },
+          ]),
+        ]}
+      />
       <PageHero
         eyebrow="Nuestros programas"
         emoji="🌈"

@@ -8,6 +8,8 @@ import CtaBand from "@/components/CtaBand";
 import { programs, waLink } from "@/lib/site";
 import { colorMap } from "@/lib/colors";
 import { clsx } from "@/lib/clsx";
+import JsonLd from "@/components/JsonLd";
+import { serviceSchema, breadcrumbSchema, medicalWebPageSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
   return programs.map((p) => ({ slug: p.slug }));
@@ -24,6 +26,7 @@ export async function generateMetadata({
   return {
     title: program.title,
     description: program.short,
+    alternates: { canonical: `/programas/${program.slug}` },
   };
 }
 
@@ -41,6 +44,17 @@ export default async function ProgramPage({
 
   return (
     <>
+      <JsonLd
+        data={[
+          serviceSchema(program),
+          medicalWebPageSchema(program.title, program.short, `/programas/${program.slug}`),
+          breadcrumbSchema([
+            { name: "Inicio", path: "/" },
+            { name: "Programas", path: "/programas" },
+            { name: program.title, path: `/programas/${program.slug}` },
+          ]),
+        ]}
+      />
       <section className={clsx("relative overflow-hidden", c.bgSoft)}>
         <div className="dot-grid pointer-events-none absolute inset-0 opacity-40" aria-hidden />
         <Container className="relative grid items-center gap-8 py-14 lg:grid-cols-2 lg:py-16">

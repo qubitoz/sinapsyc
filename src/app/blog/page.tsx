@@ -5,18 +5,46 @@ import BlogCard from "@/components/BlogCard";
 import Reveal from "@/components/Reveal";
 import CtaBand from "@/components/CtaBand";
 import { getAllPosts } from "@/lib/blog";
+import { site } from "@/lib/site";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Blog",
   description:
     "Artículos y recursos sobre neurodesarrollo infantil, lenguaje, integración sensorial y consejos para acompañar el desarrollo de tu hijo.",
+  alternates: { canonical: "/blog" },
 };
 
 export default function BlogPage() {
   const posts = getAllPosts();
 
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: `Blog de ${site.name}`,
+    url: `${site.url}/blog`,
+    inLanguage: "es-MX",
+    publisher: { "@id": `${site.url}/#organization` },
+    blogPost: posts.map((p) => ({
+      "@type": "BlogPosting",
+      headline: p.title,
+      url: `${site.url}/blog/${p.slug}`,
+      datePublished: p.date,
+    })),
+  };
+
   return (
     <>
+      <JsonLd
+        data={[
+          blogSchema,
+          breadcrumbSchema([
+            { name: "Inicio", path: "/" },
+            { name: "Blog", path: "/blog" },
+          ]),
+        ]}
+      />
       <PageHero
         eyebrow="Blog"
         emoji="📖"

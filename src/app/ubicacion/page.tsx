@@ -5,11 +5,14 @@ import Reveal from "@/components/Reveal";
 import CtaBand from "@/components/CtaBand";
 import { site, waLink } from "@/lib/site";
 import { WhatsAppIcon } from "@/components/ui";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Ubicación",
   description:
     "Encuéntranos en Juan Zubarán #1990, Col. Jardines Alcalde, Guadalajara, Jalisco. Horarios y contacto de Sinapsyc.",
+  alternates: { canonical: "/ubicacion" },
 };
 
 export default function UbicacionPage() {
@@ -22,6 +25,12 @@ export default function UbicacionPage() {
 
   return (
     <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Inicio", path: "/" },
+          { name: "Ubicación", path: "/ubicacion" },
+        ])}
+      />
       <PageHero
         eyebrow="Ubicación"
         emoji="📍"

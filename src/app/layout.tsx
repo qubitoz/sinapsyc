@@ -5,6 +5,8 @@ import { site } from "@/lib/site";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import JsonLd from "@/components/JsonLd";
+import { clinicSchema, organizationSchema, websiteSchema } from "@/lib/schema";
 
 const fredoka = Fredoka({
   subsets: ["latin"],
@@ -36,12 +38,30 @@ export const metadata: Metadata = {
     "intervención temprana",
     "Sinapsyc",
   ],
+  authors: [{ name: site.name }],
+  creator: site.name,
+  publisher: site.name,
+  category: "health",
+  alternates: { canonical: "/" },
+  formatDetection: { telephone: true },
   openGraph: {
     type: "website",
     locale: "es_MX",
     title: `${site.name} — Neurodesarrollo Infantil`,
     description: site.description,
     siteName: site.name,
+    images: [{ url: "/img/hero-scene.jpg", width: 1280, height: 720 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.name} — Neurodesarrollo Infantil`,
+    description: site.description,
+    images: ["/img/hero-scene.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
   icons: { icon: "/favicon.svg", apple: "/img/mascot-fox.jpg" },
 };
@@ -52,6 +72,9 @@ export default function RootLayout({
   return (
     <html lang="es-MX" className={`${fredoka.variable} ${nunito.variable}`}>
       <body className="min-h-screen bg-cream text-ink antialiased">
+        <JsonLd
+          data={[organizationSchema(), websiteSchema(), clinicSchema()]}
+        />
         <a
           href="#contenido"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-teal-500 focus:px-4 focus:py-2 focus:text-white"

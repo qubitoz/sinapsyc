@@ -8,6 +8,8 @@ import { Container } from "@/components/ui";
 import CtaBand from "@/components/CtaBand";
 import BlogCard from "@/components/BlogCard";
 import { getAllPosts, getPost, getPostSlugs, formatDate } from "@/lib/blog";
+import JsonLd from "@/components/JsonLd";
+import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
   return getPostSlugs().map((slug) => ({ slug }));
@@ -24,10 +26,12 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: "article",
+      publishedTime: post.date,
       images: post.cover ? [{ url: post.cover }] : undefined,
     },
   };
@@ -46,21 +50,17 @@ export default async function BlogPostPage({
     .filter((p) => p.slug !== slug)
     .slice(0, 3);
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: post.title,
-    datePublished: post.date,
-    author: { "@type": "Organization", name: post.author },
-    description: post.excerpt,
-    image: post.cover,
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      <JsonLd
+        data={[
+          blogPostingSchema(post),
+          breadcrumbSchema([
+            { name: "Inicio", path: "/" },
+            { name: "Blog", path: "/blog" },
+            { name: post.title, path: `/blog/${post.slug}` },
+          ]),
+        ]}
       />
 
       <article>

@@ -4,29 +4,27 @@ import PageHero from "@/components/PageHero";
 import FaqAccordion from "@/components/FaqAccordion";
 import CtaBand from "@/components/CtaBand";
 import { faqs } from "@/lib/site";
+import JsonLd from "@/components/JsonLd";
+import { faqSchema, breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Preguntas Frecuentes",
   description:
     "Resolvemos las dudas más comunes de las familias sobre terapia infantil, señales de alerta, autismo, TDAH, lenguaje, alimentación y la primera cita de valoración.",
+  alternates: { canonical: "/preguntas-frecuentes" },
 };
 
 export default function FaqPage() {
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a.join(" ") },
-    })),
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      <JsonLd
+        data={[
+          faqSchema(faqs),
+          breadcrumbSchema([
+            { name: "Inicio", path: "/" },
+            { name: "Preguntas Frecuentes", path: "/preguntas-frecuentes" },
+          ]),
+        ]}
       />
       <PageHero
         eyebrow="Preguntas frecuentes"
