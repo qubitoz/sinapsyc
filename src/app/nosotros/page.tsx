@@ -23,7 +23,7 @@ const spacePhotos = [
 export const metadata: Metadata = {
   title: "Acerca de Nosotros | Neurodesarrollo Infantil",
   description:
-    "Conoce a Sinapsyc, centro de neurodesarrollo infantil en Guadalajara. Acompañamos a las familias con atención personalizada, cálida y profesional para niños de 0 a 8 años.",
+    "Conoce a Sinapsyc, centro de neurodesarrollo infantil en Guadalajara. Acompañamos a las familias de niños de 0 a 8 años con atención cálida y profesional.",
   alternates: { canonical: "/nosotros" },
 };
 
