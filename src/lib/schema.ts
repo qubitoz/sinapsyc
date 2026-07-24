@@ -1,4 +1,4 @@
-import { site, programs, faqs, type Program } from "./site";
+import { site, programs, faqs, googleRating, googleReviews, type Program } from "./site";
 import type { PostMeta, Post } from "./blog";
 
 // Stable @id anchors on the canonical domain
@@ -93,6 +93,19 @@ export function clinicSchema() {
       "@type": "MedicalTherapy",
       name: p.title,
       url: `${site.url}/programas/${p.slug}`,
+    })),
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: googleRating.value,
+      reviewCount: googleRating.count,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    review: googleReviews.slice(0, 5).map((r) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: r.author },
+      reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
+      reviewBody: r.text,
     })),
     parentOrganization: { "@id": ORG_ID },
   };

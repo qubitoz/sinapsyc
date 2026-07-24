@@ -271,9 +271,10 @@ export default function Home() {
       <section className="py-16 sm:py-20">
         <Container>
           <SectionHeading
-            eyebrow="Familias que confían en nosotros"
+            eyebrow="Reseñas de Google"
             eyebrowClass="bg-sun-100 text-sun-500"
-            title="Historias que nos llenan el corazón"
+            title="Lo que dicen las familias"
+            subtitle="Historias reales de familias que han confiado en nosotros. Puedes leerlas —y dejar la tuya— directamente en Google."
           />
           <div className="mt-12">
             <Testimonials />

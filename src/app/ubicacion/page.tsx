@@ -19,9 +19,7 @@ export default function UbicacionPage() {
   const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(
     site.mapsQuery
   )}&output=embed`;
-  const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
-    site.mapsQuery
-  )}`;
+  const directionsUrl = site.directionsUrl;
 
   return (
     <>

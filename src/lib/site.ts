@@ -26,6 +26,7 @@ export const site = {
   },
   googleProfile:
     "https://www.google.com/maps/place/Sinapsyc/data=!4m2!3m1!1s0x0:0x258b9ada80a4e79",
+  directionsUrl: "https://maps.app.goo.gl/wsspNadHR5oF83up7",
 };
 
 export function waLink(message?: string) {
@@ -613,4 +614,60 @@ export const videos: VideoItem[] = [
   { file: "video_terapia_tactil_antifaz_cubos", poster: "poster-video_terapia_tactil_antifaz_cubos", title: "Exploración táctil con antifaz" },
   { file: "video_fiesta_verano_pesca_luz_neon", poster: "poster-video_fiesta_verano_pesca_luz_neon", title: "Fiesta de verano: pesca con luz neón" },
   { file: "video_dia_mundial_autismo_manos_azules", poster: "poster-video_dia_mundial_autismo_manos_azules", title: "Día Mundial del Autismo" },
+];
+
+// ---------- Reseñas reales de Google ----------
+export const googleRating = { value: 4.2, count: 21 };
+
+export type GoogleReview = {
+  author: string;
+  text: string;
+  localGuide?: boolean;
+  color: "teal" | "sky" | "sun" | "bubble";
+};
+
+export const googleReviews: GoogleReview[] = [
+  {
+    author: "Liliana Ascencio",
+    color: "teal",
+    text: "Llegamos cuando mi niño tenía año y medio con un diagnóstico reciente de autismo. Desde el primer momento nos sentimos entendidos, orientados y acompañados. Hoy tiene 5 años y no tengo más que agradecimiento: hemos pasado por terapia conductual, sensorial y de lenguaje, y nos han dado herramientas para lograr su independencia. Lo más valioso: haber logrado un niño regulado por más de año y medio sin medicación, aplicando las estrategias que aquí nos enseñan. ¡100% recomendados!",
+  },
+  {
+    author: "Danny Rizo",
+    localGuide: true,
+    color: "bubble",
+    text: "Sinapsyc no es solo un lugar de terapias, ellos son una familia. Atendieron a mi hijo con mucha calidad y su terapeuta Andy siempre se ocupaba de ayudarnos. Mi niño es autista y siempre nos brindaron apoyo y aprendizaje. Si estás buscando un centro de neurodesarrollo, te súper recomiendo Sinapsyc: desde las recepcionistas hasta los terapeutas son excelentes personas.",
+  },
+  {
+    author: "Athziri Yasmin Tejeda",
+    color: "sun",
+    text: "¡10000/10! ✨ Mis felicitaciones por su gran dedicación y apoyo. A mi niño le ayudaron muchísimo en su desarrollo, y a mí a conocerlo y saber guiarlo de mejor forma. Un agradecimiento especial para Andrea, que pese a que mi niño ya está en otro enfoque, sigue muy al pendiente.",
+  },
+  {
+    author: "Aminta Briseño",
+    localGuide: true,
+    color: "sky",
+    text: "Excelente centro de terapias y muy completo. Mi hija asiste encantada a pesar de que son cosas que le parecen difíciles; va feliz pues le gusta el trato de la terapeuta Andrea. Siento que hemos avanzado mucho, siempre respetando su ritmo y su autoestima. Súper recomendado.",
+  },
+  {
+    author: "Paulina Chavoya",
+    color: "bubble",
+    text: "Excelente atención, siempre buscando apoyar a los niños con mucho cariño, amor y empatía. Explican todo súper bien para que entiendas el proceso por el que están pasando los peques, y con mucha empatía hacia ti como mamá o papá. 100% recomendado.",
+  },
+  {
+    author: "Cristina Alejandra Costilla",
+    color: "teal",
+    text: "¡Excelente servicio y atención humana! Las maestras Rosa y Gabriela se mostraron siempre comprometidas con el proceso de mis hijos, que avanzaron muchísimo. También agradezco a Susi por estar siempre atenta en recepción. ¡Sigan trabajando igual!",
+  },
+  {
+    author: "Etcin Manzo",
+    color: "sun",
+    text: "Desde la primera sesión mi hija salió encantada. Las terapeutas son comprometidas, conocen su área y además te orientan para el adecuado neurodesarrollo de los niños.",
+  },
+  {
+    author: "Rodrigo Castro",
+    localGuide: true,
+    color: "sky",
+    text: "Excelente lugar para el apoyo de tu hijo. Personal muy capacitado y con ganas de ayudar. Calidad humana inmejorable.",
+  },
 ];
