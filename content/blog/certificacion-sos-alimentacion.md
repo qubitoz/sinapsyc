@@ -2,7 +2,7 @@
 title: "Certificación SOS: cómo acompañamos a los niños a los que «no les gusta comer»"
 date: "2026-07-23"
 excerpt: "Si la hora de la comida se ha vuelto una lucha en casa, no estás solo. Te contamos qué es el enfoque SOS de alimentación y por qué nuestra certificación marca la diferencia."
-cover: "/fotos/revision_oral_casa_munecas.jpg"
+cover: "/img/blog-cover-alimentacion.jpg"
 author: "Equipo Sinapsyc"
 category: "Alimentación"
 tags: ["alimentación", "certificación", "SOS", "selectividad alimentaria"]

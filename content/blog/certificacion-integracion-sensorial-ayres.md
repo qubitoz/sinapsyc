@@ -2,7 +2,7 @@
 title: "¿Qué significa que un terapeuta esté certificado en Integración Sensorial de Ayres®?"
 date: "2026-07-22"
 excerpt: "Cuando eliges dónde acompañar a tu hijo, la formación del equipo importa. Te explicamos con calma qué es la certificación en Integración Sensorial de Ayres® y por qué te da tranquilidad."
-cover: "/fotos/terapia_columpio_vestibular.jpg"
+cover: "/img/blog-cover-integracion-sensorial.jpg"
 author: "Equipo Sinapsyc"
 category: "Integración Sensorial"
 tags: ["integración sensorial", "certificación", "Ayres", "CLASI"]

@@ -2,7 +2,7 @@
 title: "Cómo preparar a tu hijo (y a ti) para la primera cita de valoración"
 date: "2026-07-21"
 excerpt: "Dar el primer paso puede generar nervios, y es completamente normal. Aquí tienes una guía cálida y sencilla para llegar tranquilos a tu primera cita en Sinapsyc."
-cover: "/fotos/terapia_juguetes_huevos_helicoptero.jpg"
+cover: "/img/blog-cover-primera-cita.jpg"
 author: "Equipo Sinapsyc"
 category: "Consejos para padres"
 tags: ["primera cita", "valoración", "consejos para padres"]
