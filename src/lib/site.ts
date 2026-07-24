@@ -37,6 +37,7 @@ export const nav = [
   { label: "Nosotros", href: "/nosotros" },
   { label: "Nuestro Enfoque", href: "/enfoque" },
   { label: "Programas", href: "/programas" },
+  { label: "Galería", href: "/galeria" },
   { label: "Preguntas", href: "/preguntas-frecuentes" },
   { label: "Blog", href: "/blog" },
   { label: "Ubicación", href: "/ubicacion" },
@@ -476,4 +477,138 @@ export const testimonials = [
       "Un espacio cálido y profesional. Cada logro, por pequeño que parezca, lo celebran con nosotros. Recomiendo Sinapsyc con el corazón.",
     color: "sun" as const,
   },
+];
+
+// ---------- Fotografías reales del centro ----------
+export const foto = (name: string) => `/fotos/${name}.jpg`;
+
+/** Foto principal + galería por programa (fotos reales del centro). */
+export const programMedia: Record<string, { photo: string; gallery: string[] }> = {
+  "terapia-ocupacional": {
+    photo: "juego_carritos_rampa_tapete",
+    gallery: ["juego_carritos_rampa_tapete", "terapia_juguetes_huevos_helicoptero"],
+  },
+  "integracion-sensorial": {
+    photo: "terapia_sensorial_caja_arena",
+    gallery: [
+      "terapia_sensorial_caja_arena",
+      "terapia_columpio_vestibular",
+      "terapia_tactil_antifaz_cubos",
+      "terapia_sensorial_espuma_columpio",
+      "terapia_auditiva_orejeras",
+    ],
+  },
+  "terapia-fisica": {
+    photo: "terapia_columpio_gorro_fresa",
+    gallery: ["terapia_columpio_gorro_fresa", "terapia_grupal_mesa_escalada"],
+  },
+  "terapia-alimentacion": {
+    photo: "revision_oral_casa_munecas",
+    gallery: ["revision_oral_casa_munecas", "terapia_oral_miofuncional_lengua"],
+  },
+  "terapia-conductual": {
+    photo: "terapia_juguetes_huevos_helicoptero",
+    gallery: ["terapia_juguetes_huevos_helicoptero"],
+  },
+  "terapia-lenguaje": {
+    photo: "terapia_lenguaje_laptop_nino",
+    gallery: [
+      "terapia_lenguaje_laptop_nino",
+      "terapia_lenguaje_laptop_cuaderno",
+      "terapia_secuencia_tarjetas",
+    ],
+  },
+  "terapia-aprendizaje": {
+    photo: "nino_leyendo_libro_animales",
+    gallery: [
+      "nino_leyendo_libro_animales",
+      "terapia_rompecabezas_mesa",
+      "terapia_tablet_rompecabezas_granja",
+    ],
+  },
+  "intervencion-temprana": {
+    photo: "terapia_bebe_cuna_azul",
+    gallery: [
+      "terapia_bebe_cuna_azul",
+      "terapia_bebe_recien_nacido",
+      "terapia_columpio_sensorial_bebe",
+    ],
+  },
+  "evaluacion-neuropsicologica": {
+    photo: "terapeuta_laptop_mural_arcoiris",
+    gallery: ["terapeuta_laptop_mural_arcoiris", "terapia_rompecabezas_mesa"],
+  },
+  "terapia-grupal": {
+    photo: "terapia_grupal_bebes_colchoneta",
+    gallery: [
+      "terapia_grupal_bebes_colchoneta",
+      "terapia_grupal_mesa_escalada",
+      "selfie_mural_espacial_ninos",
+    ],
+  },
+  "clases-psicomotricidad": {
+    photo: "terapia_twister_mural_espacial",
+    gallery: ["terapia_twister_mural_espacial", "terapia_grupal_mesa_escalada"],
+  },
+};
+
+export type Photo = { name: string; alt: string };
+
+/** Carrusel del inicio: un vistazo al día a día. */
+export const carouselPhotos: Photo[] = [
+  { name: "terapia_columpio_vestibular", alt: "Terapia en columpio de integración sensorial" },
+  { name: "juego_carritos_rampa_tapete", alt: "Niños jugando con carritos en el tapete" },
+  { name: "terapia_bebe_cuna_azul", alt: "Terapeuta acompañando a un bebé" },
+  { name: "terapia_lenguaje_laptop_nino", alt: "Sesión de terapia de lenguaje" },
+  { name: "terapia_sensorial_caja_arena", alt: "Juego sensorial con caja de arena" },
+  { name: "terapia_grupal_mesa_escalada", alt: "Terapia grupal y escalada" },
+];
+
+/** Galería completa (página Vida en Sinapsyc). */
+export const galleryPhotos: Photo[] = [
+  { name: "terapia_columpio_vestibular", alt: "Columpio vestibular" },
+  { name: "juego_carritos_rampa_tapete", alt: "Juego con carritos en el tapete" },
+  { name: "terapia_bebe_cuna_azul", alt: "Acompañamiento a un bebé" },
+  { name: "terapia_sensorial_caja_arena", alt: "Caja de arena sensorial" },
+  { name: "terapia_lenguaje_laptop_nino", alt: "Terapia de lenguaje" },
+  { name: "terapia_columpio_gorro_fresa", alt: "Terapia física en columpio" },
+  { name: "terapia_tactil_antifaz_cubos", alt: "Exploración táctil con antifaz" },
+  { name: "terapia_bebe_recien_nacido", alt: "Estimulación temprana con bebé" },
+  { name: "terapeuta_laptop_mural_arcoiris", alt: "Nuestro espacio con mural de arcoíris" },
+  { name: "terapia_grupal_mesa_escalada", alt: "Terapia grupal y escalada" },
+  { name: "nino_leyendo_libro_animales", alt: "Niño leyendo un libro de animales" },
+  { name: "terapia_auditiva_orejeras", alt: "Regulación auditiva con orejeras" },
+  { name: "terapia_sensorial_espuma_columpio", alt: "Juego sensorial con espuma" },
+  { name: "terapia_rompecabezas_mesa", alt: "Rompecabezas y aprendizaje" },
+  { name: "terapia_tablet_rompecabezas_granja", alt: "Actividad de aprendizaje con tablet" },
+  { name: "revision_oral_casa_munecas", alt: "Valoración de alimentación" },
+  { name: "terapia_grupal_bebes_colchoneta", alt: "Terapia grupal de bebés" },
+  { name: "terapia_twister_mural_espacial", alt: "Psicomotricidad con Twister" },
+  { name: "terapia_secuencia_tarjetas", alt: "Trabajo con tarjetas de secuencia" },
+  { name: "selfie_mural_espacial_ninos", alt: "Niños en el mural espacial" },
+  { name: "terapia_columpio_sensorial_bebe", alt: "Bebé en columpio sensorial" },
+  { name: "terapia_oral_miofuncional_lengua", alt: "Terapia oral miofuncional" },
+];
+
+/** Momentos y eventos del centro. */
+export const eventPhotos: Photo[] = [
+  { name: "dia_mundial_autismo_juguete_cuentas", alt: "Día Mundial de Concienciación del Autismo" },
+  { name: "manos_pintadas_azul_adolescente", alt: "Manos azules por el Día del Autismo" },
+  { name: "halloween_disfraz_mario_bros", alt: "Halloween en Sinapsyc" },
+  { name: "halloween_disfraces_alienigenas", alt: "Disfraces de Halloween" },
+  { name: "fiesta_verano_luz_neon", alt: "Fiesta de verano con luz neón" },
+  { name: "fiesta_disfraz_rockero_rapunzel", alt: "Fiesta de disfraces" },
+  { name: "disfraz_minion_abeja", alt: "Día de disfraces" },
+  { name: "entrega_diploma_reconocimiento", alt: "Entrega de reconocimiento a una familia" },
+];
+
+export type VideoItem = { file: string; poster: string; title: string };
+
+export const videos: VideoItem[] = [
+  { file: "video_terapia_grupal_columpio_hamaca", poster: "poster-video_terapia_grupal_columpio_hamaca", title: "Terapia en columpio y hamaca" },
+  { file: "video_juego_paracaidas_grupal", poster: "poster-video_juego_paracaidas_grupal", title: "Juego grupal con paracaídas" },
+  { file: "video_juego_aros_ninos_verano", poster: "poster-video_juego_aros_ninos_verano", title: "Juego de aros en verano" },
+  { file: "video_terapia_tactil_antifaz_cubos", poster: "poster-video_terapia_tactil_antifaz_cubos", title: "Exploración táctil con antifaz" },
+  { file: "video_fiesta_verano_pesca_luz_neon", poster: "poster-video_fiesta_verano_pesca_luz_neon", title: "Fiesta de verano: pesca con luz neón" },
+  { file: "video_dia_mundial_autismo_manos_azules", poster: "poster-video_dia_mundial_autismo_manos_azules", title: "Día Mundial del Autismo" },
 ];

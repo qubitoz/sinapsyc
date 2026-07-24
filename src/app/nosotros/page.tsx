@@ -7,7 +7,18 @@ import CtaBand from "@/components/CtaBand";
 import { colorMap } from "@/lib/colors";
 import { clsx } from "@/lib/clsx";
 import JsonLd from "@/components/JsonLd";
+import PhotoGallery from "@/components/PhotoGallery";
+import { foto } from "@/lib/site";
 import { breadcrumbSchema, medicalWebPageSchema } from "@/lib/schema";
+
+const spacePhotos = [
+  { name: "terapeuta_laptop_mural_arcoiris", alt: "Sala con mural de arcoíris" },
+  { name: "terapia_columpio_vestibular", alt: "Área de columpios sensoriales" },
+  { name: "selfie_mural_espacial_ninos", alt: "Mural espacial con niños" },
+  { name: "terapia_sensorial_caja_arena", alt: "Rincón sensorial de arena" },
+  { name: "terapia_bebe_recien_nacido", alt: "Sala de estimulación temprana" },
+  { name: "entrega_diploma_reconocimiento", alt: "Reconocimiento a una familia" },
+];
 
 export const metadata: Metadata = {
   title: "Acerca de Nosotros",
@@ -53,14 +64,19 @@ export default function NosotrosPage() {
           <div className="grid items-center gap-10 lg:grid-cols-2">
             <Reveal className="relative mx-auto max-w-md">
               <div className="absolute inset-0 rotate-3 rounded-[44px] bg-sun-100" aria-hidden />
-              <div className="relative overflow-hidden rounded-[44px] bg-white p-4 shadow-2xl shadow-teal-500/10">
-                <Image
-                  src="/img/about-family.jpg"
-                  alt="Familia acompañada por Sinapsyc"
-                  width={1000}
-                  height={750}
-                  className="w-full rounded-[32px]"
-                />
+              <div className="relative overflow-hidden rounded-[44px] bg-white p-3 shadow-2xl shadow-teal-500/10">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-[34px]">
+                  <Image
+                    src={foto("revision_oral_casa_munecas")}
+                    alt="Terapeuta de Sinapsyc acompañando a un niño"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 460px"
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+              <div className="absolute -bottom-4 -right-3 rotate-[-4deg] rounded-2xl bg-white px-4 py-2 font-display text-sm font-700 text-teal-600 shadow-lg">
+                Espacio cálido y seguro 💛
               </div>
             </Reveal>
             <Reveal delay={120}>
@@ -167,6 +183,29 @@ export default function NosotrosPage() {
               </div>
             </div>
           </Reveal>
+        </Container>
+      </section>
+
+      {/* Nuestro espacio */}
+      <section className="py-16 sm:py-20">
+        <Container>
+          <SectionHeading
+            eyebrow="Conoce el lugar"
+            eyebrowClass="bg-sun-100 text-sun-500"
+            title="Nuestro espacio"
+            subtitle="Un entorno diseñado para que cada niño explore, juegue y se sienta seguro."
+          />
+          <div className="mt-12">
+            <PhotoGallery photos={spacePhotos} variant="grid" />
+          </div>
+          <p className="mt-8 text-center">
+            <a
+              href="/galeria"
+              className="font-display font-600 text-teal-600 hover:text-teal-700"
+            >
+              Ver toda la galería →
+            </a>
+          </p>
         </Container>
       </section>
 

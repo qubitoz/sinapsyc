@@ -5,10 +5,11 @@ import Link from "next/link";
 import { Button, Container, Pill, WhatsAppIcon } from "@/components/ui";
 import Reveal from "@/components/Reveal";
 import CtaBand from "@/components/CtaBand";
-import { programs, waLink } from "@/lib/site";
+import { programs, programMedia, waLink } from "@/lib/site";
 import { colorMap } from "@/lib/colors";
 import { clsx } from "@/lib/clsx";
 import JsonLd from "@/components/JsonLd";
+import PhotoGallery from "@/components/PhotoGallery";
 import { serviceSchema, breadcrumbSchema, medicalWebPageSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
@@ -41,6 +42,11 @@ export default async function ProgramPage({
 
   const c = colorMap[program.color];
   const others = programs.filter((p) => p.slug !== slug).slice(0, 3);
+  const media = programMedia[program.slug];
+  const galleryPhotos = (media?.gallery ?? []).map((name) => ({
+    name,
+    alt: `${program.title} en Sinapsyc`,
+  }));
 
   return (
     <>
@@ -168,8 +174,25 @@ export default async function ProgramPage({
         </Container>
       </section>
 
+      {/* Fotos reales de la terapia */}
+      {galleryPhotos.length > 0 && (
+        <section className={clsx("py-14 sm:py-16", c.bgSoft)}>
+          <Container>
+            <div className="mx-auto mb-10 max-w-2xl text-center">
+              <span className={clsx("inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-1.5 text-sm font-700", c.text)}>
+                📸 Un vistazo real
+              </span>
+              <h2 className="mt-4 font-display text-3xl font-700 text-ink">
+                Así se vive la {program.title.toLowerCase()}
+              </h2>
+            </div>
+            <PhotoGallery photos={galleryPhotos} variant="grid" />
+          </Container>
+        </section>
+      )}
+
       {/* Related */}
-      <section className="pb-4">
+      <section className="py-14 sm:py-16">
         <Container>
           <h2 className="text-center font-display text-2xl font-600 text-ink">
             Otros programas que pueden interesarte

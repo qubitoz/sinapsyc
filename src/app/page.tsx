@@ -6,7 +6,8 @@ import ProgramCard from "@/components/ProgramCard";
 import Testimonials from "@/components/Testimonials";
 import BlogCard from "@/components/BlogCard";
 import CtaBand from "@/components/CtaBand";
-import { approach, programs, waLink } from "@/lib/site";
+import PhotoCarousel from "@/components/PhotoCarousel";
+import { approach, programs, carouselPhotos, waLink } from "@/lib/site";
 import { getAllPosts } from "@/lib/blog";
 import { colorMap } from "@/lib/colors";
 import { clsx } from "@/lib/clsx";
@@ -147,6 +148,31 @@ export default function Home() {
               </div>
             </div>
           </Reveal>
+        </Container>
+      </section>
+
+      {/* ---------------- CARRUSEL DE FOTOS ---------------- */}
+      <section className="py-10 sm:py-14">
+        <Container>
+          <div className="grid items-center gap-8 lg:grid-cols-[0.85fr_1.15fr]">
+            <Reveal>
+              <SectionHeading
+                align="left"
+                eyebrow="Un vistazo real"
+                eyebrowClass="bg-sky-brand-100 text-sky-brand-600"
+                title="Así se vive Sinapsyc"
+                subtitle="Salas sensoriales, columpios, murales y mucho juego. Un espacio pensado para que cada niño disfrute su proceso."
+              />
+              <div className="mt-6">
+                <Button href="/galeria" variant="primary">
+                  Ver la galería completa
+                </Button>
+              </div>
+            </Reveal>
+            <Reveal delay={120}>
+              <PhotoCarousel photos={carouselPhotos} />
+            </Reveal>
+          </div>
         </Container>
       </section>
 
