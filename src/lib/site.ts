@@ -24,6 +24,8 @@ export const site = {
     facebook: "https://www.facebook.com/",
     instagram: "https://www.instagram.com/",
   },
+  googleProfile:
+    "https://www.google.com/maps/place/Sinapsyc/data=!4m2!3m1!1s0x0:0x258b9ada80a4e79",
 };
 
 export function waLink(message?: string) {

@@ -11,7 +11,7 @@ import JsonLd from "@/components/JsonLd";
 import { breadcrumbSchema, medicalWebPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Nuestro Enfoque",
+  title: "Nuestro Enfoque Integral e Interdisciplinario",
   description:
     "Un enfoque integral e interdisciplinario centrado en el niño y la familia. Conoce cómo trabajamos de la mano con padres, escuelas y profesionales de la salud.",
   alternates: { canonical: "/enfoque" },

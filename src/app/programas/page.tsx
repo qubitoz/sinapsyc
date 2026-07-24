@@ -9,9 +9,9 @@ import JsonLd from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Programas y Terapias",
+  title: "Programas y Terapias Infantiles (0–8 años)",
   description:
-    "Conoce todos los programas de Sinapsyc: terapia ocupacional, integración sensorial, lenguaje, física, alimentación, conductual, aprendizaje, intervención temprana y más.",
+    "Terapia ocupacional, integración sensorial, lenguaje, física, alimentación y más. Programas de neurodesarrollo para niños de 0 a 8 años en Guadalajara.",
   alternates: { canonical: "/programas" },
 };
 

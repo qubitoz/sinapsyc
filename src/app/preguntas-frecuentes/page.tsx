@@ -8,7 +8,7 @@ import JsonLd from "@/components/JsonLd";
 import { faqSchema, breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Preguntas Frecuentes",
+  title: "Preguntas Frecuentes sobre Terapia Infantil",
   description:
     "Resolvemos las dudas más comunes de las familias sobre terapia infantil, señales de alerta, autismo, TDAH, lenguaje, alimentación y la primera cita de valoración.",
   alternates: { canonical: "/preguntas-frecuentes" },

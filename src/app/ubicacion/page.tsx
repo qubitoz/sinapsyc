@@ -9,9 +9,9 @@ import JsonLd from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Ubicación",
+  title: "Ubicación y Horarios en Guadalajara",
   description:
-    "Encuéntranos en Juan Zubarán #1990, Col. Jardines Alcalde, Guadalajara, Jalisco. Horarios y contacto de Sinapsyc.",
+    "Encuéntranos en Juan Zubarán #1990, Col. Jardines Alcalde, Guadalajara, Jalisco. Consulta horarios, mapa y contáctanos por WhatsApp para agendar tu cita.",
   alternates: { canonical: "/ubicacion" },
 };
 

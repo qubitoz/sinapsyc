@@ -10,9 +10,9 @@ import { breadcrumbSchema } from "@/lib/schema";
 import { galleryPhotos, eventPhotos, videos, site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Galería — Vida en Sinapsyc",
+  title: "Galería: Nuestro Espacio, Terapias y Momentos",
   description:
-    "Un vistazo a nuestro espacio, las terapias y los momentos especiales que vivimos con las familias en Sinapsyc, Guadalajara.",
+    "Un vistazo a nuestro espacio, las terapias y los momentos especiales que vivimos con las familias en Sinapsyc, Guadalajara. Fotos y videos reales del centro.",
   alternates: { canonical: "/galeria" },
 };
 

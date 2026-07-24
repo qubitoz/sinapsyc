@@ -25,8 +25,8 @@ export async function generateMetadata({
   const program = programs.find((p) => p.slug === slug);
   if (!program) return { title: "Programa" };
   return {
-    title: program.title,
-    description: program.short,
+    title: `${program.title} para Niños en Guadalajara`,
+    description: `${program.short} Terapia infantil para niños de 0 a 8 años en Sinapsyc, Guadalajara.`,
     alternates: { canonical: `/programas/${program.slug}` },
   };
 }

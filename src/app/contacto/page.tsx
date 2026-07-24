@@ -9,9 +9,9 @@ import JsonLd from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Agenda tu cita",
+  title: "Agenda tu Primera Cita de Valoración",
   description:
-    "Agenda tu primera cita de valoración en Sinapsyc y recibe un beneficio especial al iniciar tu proceso. Estamos en Guadalajara, Jalisco.",
+    "Agenda tu primera cita de valoración en Sinapsyc y recibe un beneficio especial al iniciar tu proceso. Terapia infantil en Guadalajara, Jalisco.",
   alternates: { canonical: "/contacto" },
 };
 

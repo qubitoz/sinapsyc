@@ -23,9 +23,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) return { title: "Artículo" };
+  const desc =
+    post.excerpt.length > 160 ? post.excerpt.slice(0, 157).trimEnd() + "…" : post.excerpt;
   return {
-    title: post.title,
-    description: post.excerpt,
+    title: { absolute: post.title },
+    description: desc,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
       title: post.title,

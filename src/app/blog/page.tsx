@@ -10,7 +10,7 @@ import JsonLd from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Blog sobre Neurodesarrollo Infantil",
   description:
     "Artículos y recursos sobre neurodesarrollo infantil, lenguaje, integración sensorial y consejos para acompañar el desarrollo de tu hijo.",
   alternates: { canonical: "/blog" },
