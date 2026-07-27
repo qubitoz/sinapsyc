@@ -47,16 +47,24 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_MX",
+    url: "/",
     title: `${site.name} — Neurodesarrollo Infantil`,
     description: site.description,
     siteName: site.name,
-    images: [{ url: "/img/hero-scene.jpg", width: 1280, height: 720 }],
+    images: [
+      {
+        url: "/og/og-default.jpg",
+        width: 1200,
+        height: 630,
+        alt: `${site.name} — ${site.slogan}`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${site.name} — Neurodesarrollo Infantil`,
     description: site.description,
-    images: ["/img/hero-scene.jpg"],
+    images: ["/og/og-default.jpg"],
   },
   robots: {
     index: true,

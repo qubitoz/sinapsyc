@@ -27,10 +27,28 @@ export async function generateMetadata({
   const tail = " Terapia infantil de 0 a 8 años en Guadalajara.";
   const description =
     program.short.length + tail.length <= 162 ? program.short + tail : program.short;
+  const title = `${program.title} en Guadalajara`;
+  const ogImage = `/og/og-${program.slug}.jpg`;
   return {
-    title: `${program.title} en Guadalajara`,
+    title,
     description,
     alternates: { canonical: `/programas/${program.slug}` },
+    openGraph: {
+      type: "website",
+      locale: "es_MX",
+      url: `/programas/${program.slug}`,
+      title,
+      description,
+      images: [
+        { url: ogImage, width: 1200, height: 630, alt: `${program.title} · Sinapsyc` },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [ogImage],
+    },
   };
 }
 

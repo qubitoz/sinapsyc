@@ -31,10 +31,19 @@ export async function generateMetadata({
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
       title: post.title,
-      description: post.excerpt,
+      description: desc,
       type: "article",
+      url: `/blog/${post.slug}`,
       publishedTime: post.date,
-      images: post.cover ? [{ url: post.cover }] : undefined,
+      images: post.cover
+        ? [{ url: post.cover, width: 1280, height: 720, alt: post.title }]
+        : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: desc,
+      images: post.cover ? [post.cover] : undefined,
     },
   };
 }
