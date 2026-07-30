@@ -10,6 +10,7 @@ import { colorMap } from "@/lib/colors";
 import { clsx } from "@/lib/clsx";
 import JsonLd from "@/components/JsonLd";
 import PhotoGallery from "@/components/PhotoGallery";
+import RichText from "@/components/RichText";
 import { serviceSchema, breadcrumbSchema, medicalWebPageSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
@@ -149,7 +150,7 @@ export default async function ProgramPage({
               </h2>
               {program.paragraphs.map((p, i) => (
                 <p key={i} className="text-lg leading-relaxed text-ink-soft">
-                  {p}
+                  <RichText text={p} />
                 </p>
               ))}
 
