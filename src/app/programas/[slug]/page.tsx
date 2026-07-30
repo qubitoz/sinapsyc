@@ -101,8 +101,14 @@ export default async function ProgramPage({
             <h1 className="mt-5 font-display text-4xl font-700 leading-tight text-ink sm:text-5xl">
               {program.title}
             </h1>
-            <p className="mt-4 max-w-xl text-lg leading-relaxed text-ink-soft">
-              {program.short}
+            <p
+              className={clsx(
+                "mt-5 max-w-xl border-l-4 pl-4 font-display text-xl leading-snug sm:text-2xl",
+                c.border,
+                c.text
+              )}
+            >
+              {program.tagline}
             </p>
             <div className="mt-7">
               <a

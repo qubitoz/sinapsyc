@@ -52,6 +52,8 @@ export const nav = [
 export type Program = {
   slug: string;
   title: string;
+  /** Frase destacada del programa (lema que define su enfoque). */
+  tagline: string;
   short: string;
   image: string;
   color: "teal" | "sky" | "sun" | "bubble";
@@ -65,144 +67,173 @@ export const programs: Program[] = [
   {
     slug: "terapia-ocupacional",
     title: "Terapia Ocupacional",
+    tagline:
+      "Cada experiencia significativa ayuda a cada niño a descubrir sus capacidades, desarrollar habilidades y ganar autonomía.",
     short:
-      "El juego como motor del aprendizaje: motricidad, atención, regulación y autonomía en el día a día.",
+      "Habilidades para participar de forma independiente en la vida diaria, a través del juego y experiencias significativas.",
     image: "/img/prog-ocupacional.png",
     color: "teal",
     emoji: "🦝",
     paragraphs: [
-      "Intervención dirigida a niños que requieren desarrollar habilidades esenciales en el día a día. El juego es la ocupación más importante para el aprendizaje del niño y es el medio para fortalecer motricidad, atención, regulación emocional y la autonomía en rutinas como vestirse, alimentarse o aprender a ir al baño.",
+      "La terapia ocupacional ayuda a los niños a desarrollar las habilidades necesarias para participar de forma independiente y exitosa en las actividades de su vida diaria, favoreciendo su desarrollo integral a través del juego y de experiencias significativas.",
+      "Mediante una evaluación personalizada y un plan de intervención, trabajamos áreas como la motricidad fina y gruesa, integración sensorial, atención, funciones ejecutivas, coordinación, autonomía en las actividades de la vida diaria, regulación emocional, juego y participación escolar y social.",
+      "Además, acompañamos a la familia con estrategias prácticas para fortalecer el aprendizaje en casa y favorecer que las habilidades adquiridas se generalicen en los diferentes entornos donde el niño se desarrolla.",
     ],
     benefits: [
       "Motricidad fina y gruesa",
-      "Atención y concentración",
-      "Regulación emocional",
-      "Autonomía en rutinas diarias",
+      "Atención y funciones ejecutivas",
+      "Autonomía en la vida diaria",
+      "Juego y participación escolar",
     ],
   },
   {
     slug: "integracion-sensorial",
     title: "Terapia de Integración Sensorial",
+    tagline:
+      "Procesar y descubrir el mundo a través de los sentidos para disfrutar de la vida diaria y participar con mayor confianza.",
     short:
-      "Ayudamos a procesar mejor los sonidos, movimientos y texturas para una mayor participación en casa y la escuela.",
+      "Favorecemos cómo el cerebro recibe, organiza e interpreta la información de los sentidos para responder mejor al entorno.",
     image: "/img/prog-sensorial.png",
     color: "sky",
     emoji: "🐙",
     paragraphs: [
-      "Intervención dirigida a niños que presentan dificultades para procesar y responder adecuadamente a los estímulos del entorno, como sonidos, movimientos o texturas. A través de actividades lúdicas y estructuradas, favorecemos una mejor regulación, atención y participación en casa y en la escuela, fortaleciendo así su seguridad y bienestar.",
+      "La terapia de integración sensorial favorece la manera en que el cerebro recibe, organiza e interpreta la información que proviene de los sentidos, permitiendo que el niño responda de forma más adaptativa a las demandas de su entorno.",
+      "A través de actividades lúdicas y retos cuidadosamente diseñados, trabajamos dificultades relacionadas con el procesamiento de estímulos como el movimiento, el tacto, los sonidos, la posición del cuerpo y otros estímulos sensoriales que pueden influir en la atención, la regulación emocional, el aprendizaje, el juego y la participación en las actividades de la vida diaria.",
+      "Nuestro objetivo es que cada niño desarrolle las habilidades necesarias para participar con mayor seguridad, autonomía y bienestar en su hogar, la escuela y otros entornos de su vida cotidiana.",
     ],
     cert: "Equipo certificado por la Asociación Mexicana de Integración Sensorial y con formación avalada por CLASI (Ayres Sensory Integration®), garantizando una intervención especializada basada en estándares internacionales.",
     benefits: [
-      "Mejor regulación sensorial",
-      "Mayor atención y participación",
-      "Seguridad y bienestar",
-      "Respuestas adaptadas al entorno",
+      "Procesamiento de estímulos",
+      "Regulación emocional",
+      "Atención y aprendizaje",
+      "Juego y participación",
     ],
   },
   {
     slug: "terapia-fisica",
     title: "Terapia Física",
+    tagline:
+      "El movimiento abre nuevas posibilidades para participar con mayor confianza y autonomía en la vida diaria.",
     short:
-      "Fuerza, equilibrio, coordinación y movilidad para una mayor independencia y participación.",
+      "Equilibrio, coordinación, fuerza, movilidad y control postural para un movimiento más eficiente y funcional.",
     image: "/img/prog-fisica.png",
     color: "sun",
     emoji: "🦘",
     paragraphs: [
-      "Intervención dirigida a niños que presentan alteraciones en su desarrollo motor, postura o movimiento, ya sea por retrasos madurativos, trastornos genéticos o lesiones. A través de ejercicios terapéuticos y actividades adaptadas a su edad, favorecemos la fuerza, equilibrio, la coordinación y la movilidad, promoviendo así una mayor independencia y participación del niño en su entorno cotidiano.",
+      "Intervención dirigida a niños que presentan alteraciones en su desarrollo motor, la postura o el movimiento, ya sea por retrasos madurativos, condiciones neurológicas, genéticas o lesiones. A través de ejercicios terapéuticos y actividades adaptadas a su edad y necesidades, fortalecemos habilidades como el equilibrio, la coordinación, la fuerza, la movilidad y el control postural para favorecer un movimiento más eficiente y funcional. De esta manera, cada niño puede participar con mayor seguridad, confianza y autonomía en las actividades de su vida diaria.",
+      "La intervención incluye orientación y acompañamiento continuo a la familia, brindando herramientas prácticas para favorecer la generalización de los avances en casa. Asimismo, trabajamos en coordinación con la escuela y otros profesionales.",
     ],
     benefits: [
-      "Desarrollo motor y postura",
-      "Fuerza y equilibrio",
-      "Coordinación y movilidad",
-      "Mayor independencia",
+      "Equilibrio y coordinación",
+      "Fuerza y movilidad",
+      "Control postural",
+      "Autonomía en la vida diaria",
     ],
   },
   {
     slug: "terapia-alimentacion",
     title: "Terapia de Alimentación",
+    tagline:
+      "Transformamos la hora de comer en una experiencia de aprendizaje, confianza y disfrute.",
     short:
-      "Una relación saludable con los alimentos y el desarrollo de las habilidades orales para comer.",
+      "Selectividad alimentaria, nuevos sabores y texturas, y comidas familiares más tranquilas con el enfoque SOS.",
     image: "/img/prog-alimentacion.png",
     color: "bubble",
     emoji: "🦛",
     paragraphs: [
-      "Intervención dirigida a niños que presentan dificultades en el proceso de alimentación, como selectividad alimentaria, problemas de succión, masticación o deglución. A través de estrategias lúdicas y terapéuticas adaptadas a su edad, favorecemos una relación saludable con los alimentos y el desarrollo adecuado de las habilidades orales para comer.",
+      "La terapia de alimentación está dirigida a bebés y niños que presentan selectividad alimentaria, rechazo a ciertos alimentos, dificultades para probar nuevos sabores o texturas, ansiedad al comer o problemas para participar en las comidas familiares.",
+      "Nuestro abordaje se basa en el enfoque SOS (Sequential Oral Sensory Approach to Feeding®), un modelo reconocido internacionalmente que comprende la alimentación como una habilidad compleja que involucra el procesamiento sensorial, las habilidades motoras orales, el desarrollo, el aprendizaje, la nutrición y la participación familiar.",
+      "A través del juego, la exploración y experiencias positivas con los alimentos, ayudamos a que cada niño desarrolle confianza, amplíe gradualmente su repertorio alimentario y participe con mayor tranquilidad en las comidas, siempre respetando su ritmo y sus necesidades individuales.",
     ],
     cert: "Equipo certificado en el enfoque SOS (Sequential Oral Sensory Approach to Feeding®), garantizando una intervención especializada basada en estándares internacionales.",
     benefits: [
       "Menor selectividad alimentaria",
-      "Succión, masticación y deglución",
-      "Relación saludable con la comida",
-      "Habilidades orales para comer",
+      "Nuevos sabores y texturas",
+      "Habilidades motoras orales",
+      "Comidas familiares en calma",
     ],
   },
   {
     slug: "terapia-conductual",
     title: "Terapia Conductual",
+    tagline:
+      "Porque cada conducta tiene un significado y en cada niño existe la capacidad de aprender a autorregularse.",
     short:
-      "Herramientas prácticas para la conducta, la regulación emocional y las habilidades sociales.",
+      "Acompañamiento en conducta, regulación emocional e interacción social con estrategias basadas en evidencia.",
     image: "/img/prog-conductual.png",
     color: "teal",
     emoji: "🦉",
     paragraphs: [
-      "Intervención dirigida a niños que presentan dificultades en la conducta, regulación emocional o habilidades sociales.",
-      "Brindamos orientación a padres de familia, ofreciendo herramientas prácticas que fortalecen la intervención en casa. Además trabajamos de la mano con la escuela para asegurar coherencia en las estrategias y favorecer una mejor adaptación y participación del niño en su entorno familiar y escolar, impulsando su autonomía y bienestar.",
+      "Acompañamos a niños que presentan desafíos en su conducta, regulación emocional, interacción social y adaptación a los diferentes entornos de su vida diaria. A través de estrategias basadas en evidencia, favorecemos el desarrollo de habilidades que les permitan responder de una manera más funcional, fortalecer su autorregulación y mejorar su participación en casa, la escuela y la comunidad.",
+      "Contamos con experiencia en la evaluación e intervención de niños con alta carga conductual y necesidades complejas de manejo, como conductas agresivas, conductas autolesivas, impulsividad, baja tolerancia a la frustración, dificultades para seguir instrucciones o problemas importantes de regulación emocional.",
+      "Cada plan de intervención se diseña de manera individualizada. De acuerdo con las características y necesidades de cada niño, incorporamos estrategias provenientes del Análisis Conductual Aplicado (ABA) cuando este enfoque representa la mejor alternativa terapéutica, siempre sustentadas en evidencia científica y orientadas al desarrollo de habilidades funcionales y significativas para la vida diaria.",
+      "La intervención incluye orientación y acompañamiento continuo a la familia, brindando herramientas prácticas para favorecer la generalización de los avances en casa. Asimismo, trabajamos en coordinación con la escuela y otros profesionales para promover estrategias consistentes que faciliten una mejor adaptación, participación y bienestar del niño en todos sus entornos.",
     ],
     benefits: [
-      "Regulación emocional",
+      "Autorregulación emocional",
       "Habilidades sociales",
-      "Estrategias para casa y escuela",
-      "Autonomía y bienestar",
+      "Alta carga conductual",
+      "Estrategias ABA basadas en evidencia",
     ],
   },
   {
     slug: "terapia-lenguaje",
     title: "Terapia de Lenguaje",
+    tagline:
+      "Ayudamos a cada niño a descubrir el poder de la comunicación para expresarse, comprender a los demás y conectar con el mundo que lo rodea.",
     short:
-      "Comunicación funcional, comprensión y expresión, con apoyos visuales cuando es oportuno.",
+      "Lenguaje, habla, comunicación y deglución, con sistemas aumentativos y alternativos cuando es oportuno.",
     image: "/img/prog-lenguaje.png",
     color: "bubble",
     emoji: "🦜",
     paragraphs: [
-      "Intervención dirigida a niños que presentan dificultades en el lenguaje, el habla, la comunicación o deglución. Mediante estrategias especializadas y adaptadas a su edad, favorecemos el desarrollo de la comunicación funcional, la comprensión y la expresión del lenguaje.",
-      "Cuando es oportuno, implementamos sistemas de comunicación alternativa y aumentativa, brindando apoyos visuales y herramientas que ayuden al niño a comunicarse de manera efectiva mientras fortalece sus habilidades lingüísticas.",
+      "Intervención dirigida a niños que presentan dificultades en el lenguaje, el habla, la comunicación o la deglución. A través de estrategias especializadas y adaptadas a su etapa de desarrollo, favorecemos el desarrollo de habilidades comunicativas que les permitan comprender, expresar sus ideas e interactuar de manera más efectiva en su vida diaria.",
+      "Cuando es oportuno, favorecemos la comunicación mediante el uso de sistemas de Comunicación Aumentativa Alternativa (SAAC), desde apoyos visuales hasta aplicaciones digitales y dispositivos de comunicación, según el perfil de cada niño.",
+      "La intervención incluye orientación y acompañamiento continuo a la familia, brindando herramientas prácticas para favorecer la generalización de los avances en casa. Asimismo, trabajamos en coordinación con la escuela y otros profesionales.",
     ],
     benefits: [
-      "Comunicación funcional",
       "Comprensión y expresión",
       "Habla y articulación",
-      "Sistemas alternativos y aumentativos",
+      "Deglución",
+      "Sistemas aumentativos (SAAC)",
     ],
   },
   {
     slug: "terapia-aprendizaje",
     title: "Terapia de Aprendizaje",
+    tagline:
+      "Impulsamos el aprendizaje respetando la forma única en que cada niño aprende.",
     short:
-      "Atención, memoria, lectoescritura y habilidades lógico-matemáticas para un mejor desempeño escolar.",
+      "Atención, memoria, lectoescritura, habilidades lógico-matemáticas y funciones ejecutivas.",
     image: "/img/prog-aprendizaje.png",
     color: "sky",
     emoji: "🦊",
     paragraphs: [
-      "Intervención dirigida a niños que presentan dificultades en los procesos de aprendizaje, como atención, memoria, lectoescritura o habilidades lógico–matemáticas. A través de estrategias personalizadas y adaptadas a su etapa de desarrollo, fortalecemos las habilidades cognitivas necesarias para un mejor desempeño escolar.",
+      "Intervención dirigida a niños que presentan dificultades en los procesos de aprendizaje, como atención, memoria, lectoescritura, habilidades lógico-matemáticas y funciones ejecutivas.",
+      "Identificamos el perfil de aprendizaje de cada niño, así como sus fortalezas y necesidades, para diseñar estrategias personalizadas basadas en evidencia que favorezcan un aprendizaje significativo y funcional, fortaleciendo su confianza, autonomía y participación en la escuela y en su vida diaria.",
+      "A través de actividades adaptadas a su etapa de desarrollo, potenciamos las habilidades cognitivas y académicas necesarias para favorecer un mejor desempeño escolar y un aprendizaje más eficiente.",
+      "Además, trabajamos en coordinación con la familia y la escuela para implementar estrategias consistentes que faciliten la generalización de los aprendizajes, promoviendo una participación más segura, independiente y exitosa en el entorno escolar.",
     ],
     benefits: [
       "Atención y memoria",
       "Lectoescritura",
       "Habilidades lógico-matemáticas",
-      "Mejor desempeño escolar",
+      "Funciones ejecutivas",
     ],
   },
   {
     slug: "intervencion-temprana",
     title: "Intervención Temprana",
+    tagline:
+      "Los primeros años de vida son una oportunidad única para potenciar el desarrollo y descubrir todo el potencial de tu bebé.",
     short:
-      "Para bebés con factores de riesgo o señales de alerta, en un ambiente cálido y seguro.",
+      "Para bebés con factores de riesgo o señales de alerta, respetando el ritmo y las necesidades de cada uno.",
     image: "/img/prog-temprana.png",
     color: "sun",
     emoji: "🐣",
     paragraphs: [
-      "Intervención dirigida a bebés, especialmente a aquellos con factores de riesgo o señales de alerta en su desarrollo. A través de actividades lúdicas y estructuradas, favorecemos su desarrollo motor, cognitivo, sensorial, social y de lenguaje en un ambiente cálido y seguro para tu bebé.",
-      "Brindamos orientación a la familia sobre cómo estimular al bebé en casa, fortaleciendo la participación activa de los padres en el proceso.",
+      "Intervención dirigida a bebés, especialmente a aquellos que presentan factores de riesgo o señales de alerta en su desarrollo. A través del juego y experiencias cuidadosamente diseñadas, favorecemos el desarrollo motor, cognitivo, sensorial, social y del lenguaje, siempre respetando el ritmo y las necesidades individuales de cada bebé.",
+      "Además, acompañamos a la familia con orientación y estrategias prácticas para estimular el desarrollo del bebé en casa, fortaleciendo la participación activa de los padres y cuidadores como parte fundamental del crecimiento, aprendizaje y bienestar del bebé.",
     ],
     benefits: [
       "Desarrollo motor y cognitivo",
@@ -214,60 +245,70 @@ export const programs: Program[] = [
   {
     slug: "evaluacion-neuropsicologica",
     title: "Evaluación Neuropsicológica",
+    tagline:
+      "Conocer cómo aprende, piensa y se desarrolla un niño es el primer paso para brindarle el apoyo que realmente necesita.",
     short:
-      "Conocemos cómo funciona el desarrollo cognitivo, emocional y conductual para diseñar un plan personalizado.",
+      "Un perfil de funcionamiento que orienta decisiones: atención, memoria, lenguaje, aprendizaje y funciones ejecutivas.",
     image: "/img/prog-evaluacion.png",
     color: "sky",
     emoji: "🐘",
     paragraphs: [
-      "Es un proceso especializado que nos permite conocer cómo está funcionando el desarrollo cognitivo, emocional y conductual del niño. A través de pruebas estandarizadas, actividades estructuradas y observación clínica, evaluamos áreas como la atención, memoria, lenguaje, habilidades de aprendizaje y funciones ejecutivas.",
-      "Esta evaluación nos ayuda a identificar tanto sus fortalezas como las áreas que requieren apoyo, comprender el origen de sus dificultades y diseñar un plan de intervención personalizado. Además, brindamos orientación clara a la familia y escuela para acompañar de manera adecuada su proceso de desarrollo.",
+      "Evaluar es comprender para intervenir de forma oportuna, personalizada y basada en evidencia. Por medio de pruebas estandarizadas, actividades estructuradas, observación clínica y entrevistas con la familia, evaluamos áreas como la atención, memoria, lenguaje, aprendizaje, funciones ejecutivas y otras habilidades del desarrollo, de acuerdo con las necesidades de cada niño.",
+      "Esta evaluación nos permite identificar tanto sus fortalezas como las áreas que requieren apoyo, comprender el origen de las dificultades que presenta y establecer un perfil de funcionamiento que oriente la toma de decisiones.",
+      "Con base en los resultados, elaboramos un informe detallado y diseñamos un plan de intervención personalizado. Además, brindamos recomendaciones específicas para la familia y la escuela, favoreciendo un trabajo conjunto que impulse el desarrollo, el aprendizaje y la participación del niño en su vida diaria.",
+      "Nuestro objetivo no es solo identificar dificultades, sino comprender el potencial de cada niño para ofrecer estrategias que favorezcan su desarrollo y participación en la vida diaria.",
     ],
     benefits: [
       "Pruebas estandarizadas",
-      "Perfil de fortalezas y áreas de apoyo",
-      "Origen de las dificultades",
-      "Plan de intervención personalizado",
+      "Perfil de funcionamiento",
+      "Informe detallado",
+      "Recomendaciones para casa y escuela",
     ],
   },
   {
     slug: "terapia-grupal",
     title: "Terapia Grupal",
+    tagline:
+      "Las habilidades sociales no solo se enseñan; se viven, se practican y se fortalecen junto a otros niños.",
     short:
-      "Un espacio para desarrollar habilidades sociales, comunicación y regulación en grupos reducidos (máx. 5 niños).",
+      "Habilidades sociales, comunicación y regulación emocional en grupos reducidos de máximo cinco niños.",
     image: "/img/prog-grupal.png",
     color: "teal",
     emoji: "🐻",
     paragraphs: [
-      "La terapia grupal ofrece un espacio estructurado donde los niños desarrollan habilidades sociales, de comunicación, regulación emocional, así como también estimulación sensorial y habilidades motoras.",
-      "El contexto grupal facilita que las necesidades del niño se presenten de manera «natural» en un ambiente controlado durante la interacción y el juego. Esto permite que el terapeuta intervenga en el momento, brindando estrategias que favorezcan el desarrollo de habilidades que posteriormente podrán generalizarse en otros entornos como la escuela, el hogar y otros espacios.",
-      "Existen diferentes grupos con objetivos específicos. Dependiendo de las capacidades, necesidades y fortalezas de cada niño, se busca integrarlo en el grupo que mejor favorezca su participación, aprendizaje y desarrollo. Grupos reducidos (5 niños máximo).",
+      "La terapia grupal brinda un espacio estructurado donde los niños desarrollan habilidades sociales, de comunicación, regulación emocional, integración sensorial y habilidades motoras a través de la interacción con otros niños, el juego y experiencias terapéuticas guiadas.",
+      "El contexto grupal favorece que los desafíos y fortalezas de cada niño se manifiesten de manera natural durante las actividades compartidas. Esto permite al terapeuta intervenir en el momento oportuno, proporcionando estrategias que fortalezcan el aprendizaje y faciliten la generalización de las habilidades en entornos como la escuela, el hogar y la comunidad.",
+      "Contamos con diferentes grupos diseñados para responder a objetivos terapéuticos específicos. La asignación de cada niño se realiza mediante una valoración clínica, considerando su perfil de desarrollo, fortalezas, necesidades y objetivos de intervención, con el propósito de integrarlo al grupo que mejor favorezca su participación, aprendizaje y bienestar.",
+      "No agrupamos a los niños únicamente por edad o diagnóstico, sino por objetivos terapéuticos, nivel de desarrollo y habilidades, favoreciendo experiencias de aprendizaje significativas para todos los participantes.",
+      "Grupos reducidos de máximo cinco niños, lo que permite una atención personalizada y un acompañamiento cercano durante cada sesión.",
     ],
     benefits: [
       "Habilidades sociales",
       "Comunicación e interacción",
       "Regulación emocional",
-      "Grupos reducidos (máx. 5)",
+      "Grupos de máximo 5 niños",
     ],
   },
   {
     slug: "clases-psicomotricidad",
     title: "Clases de Psicomotricidad",
+    tagline:
+      "A través del movimiento, cada niño descubre nuevas formas de aprender, explorar y ganar autonomía.",
     short:
-      "Aprender a través del movimiento y el juego: coordinación, equilibrio y conciencia corporal.",
+      "Equilibrio, coordinación, esquema corporal y motricidad gruesa a través del movimiento y el juego.",
     image: "/img/prog-psicomotricidad.png",
     color: "sun",
     emoji: "🐵",
     paragraphs: [
-      "Nuestras clases de psicomotricidad ofrecen un espacio dinámico donde los niños aprenden a través del movimiento y el juego.",
-      "A través de circuitos motores, juegos, retos y actividades guiadas, los niños desarrollan habilidades motoras gruesas, coordinación, equilibrio y conciencia corporal.",
-      "Estas experiencias les permiten explorar su cuerpo, ganar confianza en sus movimientos y desarrollar habilidades que apoyarán su desempeño en la vida diaria.",
+      "Las clases de psicomotricidad están dirigidas a niños que desean fortalecer sus habilidades motoras, cognitivas, sociales y emocionales a través del movimiento, el juego y experiencias diseñadas de acuerdo con su edad y nivel de desarrollo.",
+      "Mediante actividades dinámicas y significativas, favorecemos el equilibrio, la coordinación, la planificación motora, el esquema corporal, la orientación espacial y la motricidad gruesa. Al mismo tiempo, fortalecemos habilidades como la atención, el seguimiento de instrucciones, el trabajo en equipo, la resolución de problemas y la confianza en sí mismos.",
+      "Nuestro objetivo es que cada niño desarrolle mayor seguridad al moverse, participe con más confianza en sus actividades diarias y disfrute del aprendizaje a través del movimiento.",
     ],
     benefits: [
-      "Motricidad gruesa",
-      "Coordinación y equilibrio",
-      "Conciencia corporal",
-      "Confianza en el movimiento",
+      "Equilibrio y coordinación",
+      "Planificación motora",
+      "Esquema corporal",
+      "Confianza en sí mismos",
     ],
   },
 ];
