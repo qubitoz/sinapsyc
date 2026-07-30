@@ -34,7 +34,7 @@ export default function Home() {
         <div className="pointer-events-none absolute -right-20 top-10 h-72 w-72 rounded-full bg-bubble-100 blur-3xl" aria-hidden />
         <div className="pointer-events-none absolute -left-20 bottom-0 h-72 w-72 rounded-full bg-sky-brand-100 blur-3xl" aria-hidden />
 
-        <Container className="relative grid items-center gap-10 py-14 lg:grid-cols-2 lg:py-20">
+        <Container className="relative grid items-center gap-10 py-14 lg:grid-cols-[1.08fr_0.92fr] lg:py-20">
           <div>
             <Reveal>
               <Pill className="bg-sun-100 text-sun-500">
@@ -62,35 +62,42 @@ export default function Home() {
                 equipo de profesionales especializados.
               </p>
             </Reveal>
+            {/* Bloque de acción: botones y garantías agrupados en una sola
+                tarjeta, cada fila en una única línea. */}
             <Reveal delay={240}>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a
-                  href={waLink(
-                    "¡Hola Sinapsyc! Me gustaría agendar una primera cita de valoración."
-                  )}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-teal-500 px-8 py-4 font-display text-lg font-600 text-white shadow-lg shadow-teal-500/30 transition-transform hover:-translate-y-0.5"
-                >
-                  <WhatsAppIcon className="h-5 w-5" />
-                  Agenda tu primera cita
-                </a>
-                <Button href="/programas" variant="outline" size="lg">
-                  Ver nuestros programas
-                </Button>
-              </div>
-            </Reveal>
-            <Reveal delay={320}>
-              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm font-600 text-ink-soft">
-                <span className="flex items-center gap-2">
-                  <Check /> Atención personalizada
-                </span>
-                <span className="flex items-center gap-2">
-                  <Check /> Equipo certificado
-                </span>
-                <span className="flex items-center gap-2">
-                  <Check /> Espacio cálido y seguro
-                </span>
+              <div className="mt-8 w-full rounded-[28px] bg-white/70 p-5 shadow-lg shadow-teal-900/5 ring-1 ring-white/70 backdrop-blur-sm sm:w-fit">
+                <div className="flex flex-col gap-3 sm:flex-row">
+                  <a
+                    href={waLink(
+                      "¡Hola Sinapsyc! Me gustaría agendar una primera cita de valoración."
+                    )}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-teal-500 px-6 py-3 font-display text-base font-600 text-white shadow-lg shadow-teal-500/30 transition-transform hover:-translate-y-0.5"
+                  >
+                    <WhatsAppIcon className="h-5 w-5" />
+                    Agenda tu primera cita
+                  </a>
+                  <Button
+                    href="/programas"
+                    variant="outline"
+                    className="whitespace-nowrap"
+                  >
+                    Ver nuestros programas
+                  </Button>
+                </div>
+
+                <ul className="mt-4 flex flex-col gap-2 border-t border-teal-100 pt-4 text-[13px] font-600 text-ink-soft sm:flex-row sm:items-center sm:gap-x-4">
+                  <li className="flex items-center gap-1.5 whitespace-nowrap">
+                    <Check /> Atención personalizada
+                  </li>
+                  <li className="flex items-center gap-1.5 whitespace-nowrap">
+                    <Check /> Equipo certificado
+                  </li>
+                  <li className="flex items-center gap-1.5 whitespace-nowrap">
+                    <Check /> Espacio cálido y seguro
+                  </li>
+                </ul>
               </div>
             </Reveal>
           </div>
@@ -359,7 +366,7 @@ export default function Home() {
 
 function Check() {
   return (
-    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-teal-500 text-white" aria-hidden>
+    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-teal-500 text-white" aria-hidden>
       <svg viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5">
         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
       </svg>
