@@ -62,10 +62,10 @@ export default function Home() {
                 equipo de profesionales especializados.
               </p>
             </Reveal>
-            {/* Bloque de acción: botones y garantías agrupados en una sola
-                tarjeta, cada fila en una única línea. */}
+            {/* Bloque de acción: botones y garantías agrupados por cercanía,
+                cada fila en una única línea. */}
             <Reveal delay={240}>
-              <div className="mt-8 w-full rounded-[28px] bg-white/70 p-5 shadow-lg shadow-teal-900/5 ring-1 ring-white/70 backdrop-blur-sm sm:w-fit">
+              <div className="mt-8">
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <a
                     href={waLink(
@@ -87,7 +87,7 @@ export default function Home() {
                   </Button>
                 </div>
 
-                <ul className="mt-4 flex flex-col gap-2 border-t border-teal-100 pt-4 text-[13px] font-600 text-ink-soft sm:flex-row sm:items-center sm:gap-x-4">
+                <ul className="mt-5 flex flex-col gap-2 text-[13px] font-600 text-ink-soft sm:flex-row sm:items-center sm:gap-x-5">
                   <li className="flex items-center gap-1.5 whitespace-nowrap">
                     <Check /> Atención personalizada
                   </li>
