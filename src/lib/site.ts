@@ -1,10 +1,26 @@
+/**
+ * Origen público del sitio. Se usa para canonicals, sitemap, schema y para
+ * resolver las imágenes de Open Graph, así que debe apuntar SIEMPRE al
+ * dominio donde el sitio está realmente publicado: si apunta a un dominio
+ * que aún no resuelve, las previsualizaciones al compartir se rompen.
+ *
+ * Al conectar el dominio definitivo basta con definir NEXT_PUBLIC_SITE_URL
+ * en Vercel (o cambiar este valor por defecto).
+ */
+export const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
+  "https://sinapsyc.vercel.app";
+
 export const site = {
   name: "Sinapsyc",
   tagline: "Neurodesarrollo Infantil",
   slogan: "Abrazamos infancias, iluminamos caminos",
   description:
     "Centro de neurodesarrollo infantil en Guadalajara. Acompañamos a las familias y potenciamos el desarrollo y bienestar de cada niño de 0 a 8 años.",
-  url: "https://sinapsyc.com.mx",
+  /** Versión corta para redes sociales (se trunca cerca de 125 caracteres). */
+  shortDescription:
+    "Terapias para niños de 0 a 8 años en Guadalajara. Acompañamos a tu familia con un equipo especializado y cálido.",
+  url: siteUrl,
   phoneDisplay: "33 3461 0814",
   whatsapp: "523334610814", // wa.me format (México, sin el 1)
   email: "hola@sinapsyc.com.mx",

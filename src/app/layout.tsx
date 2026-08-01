@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     locale: "es_MX",
     url: "/",
     title: `${site.name} — Neurodesarrollo Infantil`,
-    description: site.description,
+    description: site.shortDescription,
     siteName: site.name,
     images: [
       {
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `${site.name} — Neurodesarrollo Infantil`,
-    description: site.description,
+    description: site.shortDescription,
     images: ["/og/og-default.jpg"],
   },
   robots: {
