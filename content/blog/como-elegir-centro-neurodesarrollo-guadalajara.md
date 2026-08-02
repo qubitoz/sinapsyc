@@ -1,5 +1,6 @@
 ---
 title: "Cómo elegir un centro de neurodesarrollo infantil en Guadalajara"
+seoTitle: "Cómo elegir centro de neurodesarrollo en Guadalajara"
 date: "2026-07-20"
 excerpt: "Elegir dónde acompañar a tu hijo es una de las decisiones más importantes. Aquí tienes una guía clara —y las preguntas correctas— para elegir con confianza en Guadalajara."
 cover: "/img/blog-cover-elegir-centro.jpg"

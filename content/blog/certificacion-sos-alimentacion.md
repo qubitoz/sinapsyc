@@ -1,5 +1,6 @@
 ---
 title: "Certificación SOS: cómo acompañamos a los niños a los que «no les gusta comer»"
+seoTitle: "Enfoque SOS: terapia para niños que no quieren comer"
 date: "2026-07-23"
 excerpt: "Si la hora de la comida se ha vuelto una lucha en casa, no estás solo. Te contamos qué es el enfoque SOS de alimentación y por qué nuestra certificación marca la diferencia."
 cover: "/img/blog-cover-alimentacion.jpg"

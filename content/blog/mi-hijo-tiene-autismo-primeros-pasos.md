@@ -1,5 +1,6 @@
 ---
 title: "Mi hijo fue diagnosticado con autismo, ¿y ahora qué? Primeros pasos con calma"
+seoTitle: "Diagnóstico de autismo: primeros pasos para la familia"
 date: "2026-07-23"
 excerpt: "Recibir un diagnóstico de autismo remueve muchas emociones. Respira: no estás solo. Esta guía cálida te acompaña en los primeros pasos, sin prisa y con esperanza."
 cover: "/img/blog-cover-autismo.jpg"

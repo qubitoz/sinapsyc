@@ -1,5 +1,6 @@
 ---
 title: "5 formas sencillas de estimular el lenguaje de tu hijo en casa"
+seoTitle: "5 formas de estimular el lenguaje en casa"
 date: "2026-07-16"
 excerpt: "El lenguaje florece en los momentos cotidianos: al jugar, al cocinar, al leer juntos. Imagina cuánto puede crecer tu pequeño con pequeños gestos diarios. Aquí tienes ideas prácticas para acompañarlo."
 cover: "/img/blog-cover-2.jpg"

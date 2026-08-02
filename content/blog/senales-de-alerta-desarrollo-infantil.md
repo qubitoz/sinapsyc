@@ -1,5 +1,6 @@
 ---
 title: "Señales de alerta en el desarrollo infantil: cuándo pedir una valoración"
+seoTitle: "Señales de alerta en el desarrollo infantil"
 date: "2026-07-10"
 excerpt: "Cada niño tiene su propio ritmo, y confiar en tu instinto de mamá o papá es el primer paso. Te contamos qué señales conviene observar y por qué identificarlas a tiempo abre caminos."
 cover: "/img/blog-cover-1.jpg"

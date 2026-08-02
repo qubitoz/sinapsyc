@@ -1,5 +1,6 @@
 ---
 title: "¿Mi hijo tiene TDAH o solo mucha energía? Cómo distinguirlo"
+seoTitle: "¿TDAH o mucha energía? Cómo distinguirlo"
 date: "2026-07-19"
 excerpt: "Todos los niños tienen energía, pero ¿cuándo la inquietud es algo más? Te ayudamos a distinguir, con calma, entre un temperamento activo y las señales que conviene valorar."
 cover: "/img/blog-cover-tdah.jpg"

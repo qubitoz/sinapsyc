@@ -1,5 +1,6 @@
 ---
 title: "«Todavía no se viste solo»: cómo acompañar la autonomía de tu hijo"
+seoTitle: "Cómo fomentar la autonomía de tu hijo en casa"
 date: "2026-07-25"
 excerpt: "Vestirse, comer o lavarse las manos son grandes conquistas para un niño. Te contamos cómo acompañar esos pasos sin prisa y celebrando cada avance."
 cover: "/img/blog-cover-autonomia.jpg"

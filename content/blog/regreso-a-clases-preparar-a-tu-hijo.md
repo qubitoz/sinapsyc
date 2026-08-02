@@ -1,5 +1,6 @@
 ---
 title: "Regreso a clases: cómo preparar a tu hijo para un buen comienzo"
+seoTitle: "Regreso a clases: prepara a tu hijo sin estrés"
 date: "2026-07-31"
 excerpt: "Volver a la rutina puede generar nervios en casa. Aquí tienes una guía cálida para que el regreso a clases sea un reencuentro tranquilo y no una batalla."
 cover: "/img/blog-cover-regreso-clases.jpg"

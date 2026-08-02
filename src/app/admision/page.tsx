@@ -15,7 +15,7 @@ import { clsx } from "@/lib/clsx";
 export const metadata: Metadata = {
   title: "Admisión: Inicia el Proceso de tu Hijo",
   description:
-    "Conoce el proceso de admisión de Sinapsyc y llena la solicitud en línea. Sin referencia médica: nuestro equipo te contacta para agendar la primera cita de valoración.",
+    "Conoce el proceso de admisión de Sinapsyc y llena la solicitud en línea. Sin referencia médica: te contactamos para agendar la primera cita.",
   alternates: { canonical: "/admision" },
 };
 

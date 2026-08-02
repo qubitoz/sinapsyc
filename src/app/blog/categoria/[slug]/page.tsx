@@ -28,7 +28,7 @@ export async function generateMetadata({
     term.count === 1 ? "publicación" : "publicaciones"
   } del equipo de Sinapsyc, centro de neurodesarrollo infantil en Guadalajara.`;
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: { canonical: `/blog/categoria/${term.slug}` },
     openGraph: {

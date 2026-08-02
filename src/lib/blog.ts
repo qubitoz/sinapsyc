@@ -5,6 +5,8 @@ import matter from "gray-matter";
 export type PostMeta = {
   slug: string;
   title: string;
+  /** Título corto para la etiqueta <title> (Google corta cerca de 60). */
+  seoTitle?: string;
   date: string; // ISO
   excerpt: string;
   cover?: string;
@@ -42,6 +44,7 @@ export function getPost(slug: string): Post | null {
   return {
     slug,
     title: data.title ?? slug,
+    seoTitle: data.seoTitle,
     date: data.date
       ? new Date(data.date).toISOString()
       : new Date().toISOString(),

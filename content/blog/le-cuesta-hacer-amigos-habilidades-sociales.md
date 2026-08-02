@@ -1,5 +1,6 @@
 ---
 title: "A mi hijo le cuesta hacer amigos: cómo apoyar sus habilidades sociales"
+seoTitle: "Habilidades sociales: si le cuesta hacer amigos"
 date: "2026-07-28"
 excerpt: "Ver a tu hijo jugar solo mientras los demás se agrupan duele. Te compartimos qué hay detrás y cómo acompañarlo para que la convivencia se le vuelva más fácil."
 cover: "/img/blog-cover-amigos.jpg"

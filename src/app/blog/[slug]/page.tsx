@@ -34,7 +34,7 @@ export async function generateMetadata({
   const desc =
     post.excerpt.length > 160 ? post.excerpt.slice(0, 157).trimEnd() + "…" : post.excerpt;
   return {
-    title: { absolute: post.title },
+    title: { absolute: post.seoTitle ?? post.title },
     description: desc,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
