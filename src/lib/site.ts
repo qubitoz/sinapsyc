@@ -241,7 +241,7 @@ export const programs: Program[] = [
     slug: "intervencion-temprana",
     title: "Intervención Temprana",
     tagline:
-      "Los primeros años de vida son una oportunidad única para potenciar el desarrollo y descubrir todo el potencial de tu bebé.",
+      "Los primeros años de vida son una oportunidad única para favorecer el desarrollo y descubrir todo el potencial de tu bebé.",
     short:
       "Para bebés con factores de riesgo o señales de alerta, respetando el ritmo y las necesidades de cada uno.",
     image: "/img/prog-temprana.png",
@@ -483,31 +483,31 @@ export const approach = [
     step: "01",
     title: "Cita de valoración",
     color: "teal" as const,
-    text: "Una entrevista guiada a los padres para conocer la historia de desarrollo de cada niño, incluso desde el embarazo, y comprender sus fortalezas, necesidades y los objetivos de cada familia.",
+    text: "El proceso comienza con una entrevista dirigida a los padres o cuidadores, con el objetivo de conocer la historia del desarrollo del niño desde el embarazo, comprender sus fortalezas, necesidades y las metas que la familia desea alcanzar.",
   },
   {
     step: "02",
     title: "Evaluación",
     color: "sky" as const,
-    text: "Una valoración directa del niño desde el área correspondiente, con observación clínica, actividades específicas y herramientas de evaluación que nos permiten comprender mejor su perfil.",
+    text: "Posteriormente, se realiza una evaluación directa del niño desde el área correspondiente, mediante observación clínica, actividades estructuradas y, cuando es necesario, herramientas de evaluación estandarizadas que permiten comprender de manera integral su desarrollo.",
   },
   {
     step: "03",
-    title: "Resultados y objetivos",
+    title: "Resultados y plan terapéutico",
     color: "sun" as const,
-    text: "Compartimos un informe claro con la familia: los hallazgos encontrados y los objetivos terapéuticos a corto, mediano y largo plazo.",
+    text: "Una vez concluida la evaluación, compartimos un informe de resultados con la familia, en el que explicamos de forma clara los hallazgos, las fortalezas del niño, los desafíos identificados y los objetivos terapéuticos a corto, mediano y largo plazo.",
   },
   {
     step: "04",
-    title: "Intervención",
+    title: "Inicio de la intervención",
     color: "bubble" as const,
-    text: "Iniciamos un plan de intervención individualizado, diseñado a la medida de las fortalezas y áreas de apoyo de cada niño.",
+    text: "Con base en los resultados obtenidos, diseñamos un plan de intervención individualizado, adaptado a las necesidades, fortalezas y objetivos de cada niño y su familia.",
   },
   {
     step: "05",
     title: "Seguimiento continuo",
     color: "teal" as const,
-    text: "Acompañamiento constante y reevaluaciones periódicas para observar avances, ajustar objetivos y seguir favoreciendo el desarrollo y bienestar del niño.",
+    text: "Durante el proceso terapéutico damos seguimiento a los avances mediante orientación continua a la familia y reevaluaciones periódicas, lo que nos permite ajustar los objetivos y las estrategias de intervención de acuerdo con la evolución del niño.",
   },
 ];
 

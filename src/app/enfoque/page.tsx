@@ -47,8 +47,8 @@ export default function EnfoquePage() {
       <PageHero
         eyebrow="Nuestro enfoque"
         emoji="🧩"
-        title="Integral, interdisciplinario y centrado en la familia"
-        subtitle="Comprendemos que cada niño presenta necesidades, fortalezas y objetivos únicos. Por eso brindamos una atención personalizada dentro de sus contextos cotidianos."
+        title="Integral, interdisciplinario y centrado en el niño y la familia."
+        subtitle="Reconocemos la historia, las fortalezas y las necesidades de cada niño para construir estrategias que generen un impacto significativo en su vida diaria."
         tint="teal"
       />
 
@@ -137,16 +137,13 @@ export default function EnfoquePage() {
             })}
           </ol>
 
-          <Reveal className="mt-10 flex flex-wrap items-center justify-center gap-2 rounded-full bg-teal-50 px-6 py-4 text-center font-display text-sm font-600 text-teal-600 sm:text-base">
-            <span>Cita de valoración</span>
-            <Arrow />
-            <span>Evaluación</span>
-            <Arrow />
-            <span>Resultados y objetivos</span>
-            <Arrow />
-            <span>Intervención</span>
-            <Arrow />
-            <span>Seguimiento continuo</span>
+          <Reveal className="mt-10 flex flex-wrap items-center justify-center gap-2 rounded-3xl bg-teal-50 px-6 py-4 text-center font-display text-sm font-600 text-teal-600 sm:text-base">
+            {approach.map((s, i) => (
+              <span key={s.step} className="flex items-center gap-2">
+                {i > 0 && <Arrow />}
+                {s.title}
+              </span>
+            ))}
           </Reveal>
         </Container>
       </section>
@@ -172,35 +169,6 @@ export default function EnfoquePage() {
                 </Reveal>
               );
             })}
-            <Reveal>
-              <div className="rounded-[32px] bg-white p-8 shadow-lg shadow-teal-900/5 sm:p-10">
-                <h3 className="font-display text-2xl font-600 text-teal-600">
-                  ¿Cómo es el proceso de valoración y las terapias en Sinapsyc?
-                </h3>
-                <div className="mt-4 space-y-3 text-[15px] leading-relaxed text-ink-soft">
-                  <p>
-                    El proceso inicia con una primera cita de valoración dirigida a
-                    padres, con la intención de conocer la historia de desarrollo de
-                    cada niño, incluso desde el embarazo, así como comprender sus
-                    fortalezas, necesidades y los objetivos de cada familia.
-                  </p>
-                  <p>
-                    Al finalizar esta primera cita, la especialista podrá orientarles
-                    sobre las áreas que requieran atención y el tipo de intervención
-                    más adecuado. Posteriormente se realiza una valoración directa del
-                    niño desde el área correspondiente, con observación clínica,
-                    actividades específicas y diferentes herramientas de evaluación.
-                  </p>
-                  <p>
-                    Una vez concluido este proceso, se comparte un informe de
-                    resultados con la familia, explicando de manera clara los hallazgos
-                    y los objetivos terapéuticos a corto, mediano y largo plazo. A
-                    partir de ello, se inicia un plan de intervención individualizado,
-                    acompañado de seguimiento continuo y reevaluaciones periódicas.
-                  </p>
-                </div>
-              </div>
-            </Reveal>
           </div>
         </Container>
       </section>
