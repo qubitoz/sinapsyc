@@ -40,6 +40,7 @@ export default function ProgramasPage() {
         ]}
       />
       <PageHero
+        crumbs={[{ name: "Inicio", path: "/" }, { name: "Programas", path: "/programas" }]}
         eyebrow="Nuestros programas"
         emoji="🌈"
         title="Terapias y programas para cada etapa"

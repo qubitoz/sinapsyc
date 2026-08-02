@@ -5,7 +5,10 @@ import Link from "next/link";
 import { Button, Container, Pill, WhatsAppIcon } from "@/components/ui";
 import Reveal from "@/components/Reveal";
 import CtaBand from "@/components/CtaBand";
-import { programs, programMedia, waLink } from "@/lib/site";
+import { programs, programMedia, programBlogTags, waLink } from "@/lib/site";
+import { getPostsByTags } from "@/lib/blog";
+import BlogCard from "@/components/BlogCard";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { colorMap } from "@/lib/colors";
 import { clsx } from "@/lib/clsx";
 import JsonLd from "@/components/JsonLd";
@@ -69,6 +72,12 @@ export default async function ProgramPage({
     name,
     alt: `${program.title} en Sinapsyc`,
   }));
+  const relatedPosts = getPostsByTags(programBlogTags[program.slug] ?? [], 3);
+  const crumbs = [
+    { name: "Inicio", path: "/" },
+    { name: "Programas", path: "/programas" },
+    { name: program.title, path: `/programas/${program.slug}` },
+  ];
 
   return (
     <>
@@ -87,12 +96,7 @@ export default async function ProgramPage({
         <div className="dot-grid pointer-events-none absolute inset-0 opacity-40" aria-hidden />
         <Container className="relative grid items-center gap-8 py-14 lg:grid-cols-2 lg:py-16">
           <div>
-            <Link
-              href="/programas"
-              className={clsx("mb-5 inline-flex items-center gap-1 text-sm font-700", c.text)}
-            >
-              ← Todos los programas
-            </Link>
+            <Breadcrumbs items={crumbs} className="mb-5" />
             <div className="flex items-center gap-3">
               <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-3xl shadow-sm">
                 {program.emoji}
@@ -215,6 +219,27 @@ export default async function ProgramPage({
               </h2>
             </div>
             <PhotoGallery photos={galleryPhotos} variant="grid" />
+          </Container>
+        </section>
+      )}
+
+      {/* Artículos del blog sobre este tema */}
+      {relatedPosts.length > 0 && (
+        <section className="py-14 sm:py-16">
+          <Container>
+            <div className="mx-auto mb-10 max-w-2xl text-center">
+              <span className={clsx("inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-700", c.chipBg)}>
+                📖 Para leer
+              </span>
+              <h2 className="mt-4 font-display text-3xl font-700 text-ink">
+                Artículos sobre este tema
+              </h2>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {relatedPosts.map((p) => (
+                <BlogCard key={p.slug} post={p} />
+              ))}
+            </div>
           </Container>
         </section>
       )}

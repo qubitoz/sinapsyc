@@ -5,7 +5,7 @@ excerpt: "Sonidos, texturas, movimiento… nuestros sentidos son la puerta al mu
 cover: "/img/blog-cover-3.jpg"
 author: "Equipo Sinapsyc"
 category: "Integración Sensorial"
-tags: ["integración sensorial", "regulación", "juego"]
+tags: ["integración sensorial", "regulación", "juego", "procesamiento sensorial"]
 ---
 
 Desde que nacemos, exploramos el mundo a través de los sentidos. El tacto de una manta suave, el sonido de una canción, el movimiento de los brazos de mamá: cada sensación es información que el cerebro organiza para ayudarnos a responder al entorno. A esa capacidad de recibir, organizar y responder a los estímulos la llamamos **integración sensorial**.

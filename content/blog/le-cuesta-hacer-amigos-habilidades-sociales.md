@@ -4,8 +4,8 @@ date: "2026-07-28"
 excerpt: "Ver a tu hijo jugar solo mientras los demás se agrupan duele. Te compartimos qué hay detrás y cómo acompañarlo para que la convivencia se le vuelva más fácil."
 cover: "/img/blog-cover-amigos.jpg"
 author: "Equipo Sinapsyc"
-category: "Habilidades sociales"
-tags: ["habilidades sociales", "terapia grupal", "juego", "consejos para padres"]
+category: "Conducta y Emociones"
+tags: ["habilidades sociales", "terapia grupal", "juego", "conducta"]
 ---
 
 Pocas cosas mueven tanto a una mamá o a un papá como ver a su hijo apartado en el recreo, o escuchar que otra vez no lo invitaron a la fiesta. Duele. Y es normal que duela: queremos que nuestros hijos se sientan parte.

@@ -41,6 +41,7 @@ export default function GaleriaPage() {
         ]}
       />
       <PageHero
+        crumbs={[{ name: "Inicio", path: "/" }, { name: "Galería", path: "/galeria" }]}
         eyebrow="Vida en Sinapsyc"
         emoji="📸"
         title="Un vistazo a nuestro día a día"

@@ -4,8 +4,8 @@ date: "2026-07-31"
 excerpt: "Volver a la rutina puede generar nervios en casa. Aquí tienes una guía cálida para que el regreso a clases sea un reencuentro tranquilo y no una batalla."
 cover: "/img/blog-cover-regreso-clases.jpg"
 author: "Equipo Sinapsyc"
-category: "Consejos para padres"
-tags: ["regreso a clases", "rutinas", "escuela", "consejos para padres"]
+category: "Aprendizaje y Escuela"
+tags: ["regreso a clases", "escuela", "rutinas", "consejos para padres"]
 ---
 
 Se acercan las últimas semanas de vacaciones y con ellas llega esa mezcla tan conocida: ganas de retomar la rutina y, al mismo tiempo, cierta inquietud por cómo irá el nuevo ciclo. Si tu hijo ha tenido dificultades en la escuela, esa inquietud pesa todavía más.

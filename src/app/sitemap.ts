@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { site, programs } from "@/lib/site";
-import { getAllPosts } from "@/lib/blog";
+import { getAllPosts, getCategories, getTags } from "@/lib/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = site.url;
@@ -38,5 +38,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...programRoutes, ...postRoutes];
+  // Archivos de taxonomía: son páginas indexables que agrupan el contenido.
+  const categoryRoutes = getCategories().map((c) => ({
+    url: `${base}/blog/categoria/${c.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.5,
+  }));
+
+  const tagRoutes = getTags().map((t) => ({
+    url: `${base}/blog/etiqueta/${t.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.4,
+  }));
+
+  return [
+    ...staticRoutes,
+    ...programRoutes,
+    ...postRoutes,
+    ...categoryRoutes,
+    ...tagRoutes,
+  ];
 }

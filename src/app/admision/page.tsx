@@ -63,6 +63,7 @@ export default function AdmisionPage() {
         ]}
       />
       <PageHero
+        crumbs={[{ name: "Inicio", path: "/" }, { name: "Admisión", path: "/admision" }]}
         eyebrow="Admisión"
         emoji="🌱"
         title="Iniciar es más sencillo de lo que imaginas"

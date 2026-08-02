@@ -5,7 +5,7 @@ excerpt: "Cuando eliges dónde acompañar a tu hijo, la formación del equipo im
 cover: "/img/blog-cover-integracion-sensorial.jpg"
 author: "Equipo Sinapsyc"
 category: "Integración Sensorial"
-tags: ["integración sensorial", "certificación", "Ayres", "CLASI"]
+tags: ["integración sensorial", "certificaciones", "regulación"]
 ---
 
 Elegir dónde acompañar el desarrollo de tu hijo es una decisión del corazón, pero también de confianza. Y una de las mejores formas de confiar es conocer la **formación del equipo** que estará a su lado. Por eso queremos contarte, con claridad, qué hay detrás de una de nuestras certificaciones más importantes: la **Integración Sensorial de Ayres®**.

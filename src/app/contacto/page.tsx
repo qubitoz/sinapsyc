@@ -25,6 +25,7 @@ export default function ContactoPage() {
         ])}
       />
       <PageHero
+        crumbs={[{ name: "Inicio", path: "/" }, { name: "Agenda tu cita", path: "/contacto" }]}
         eyebrow="Agenda tu cita"
         emoji="📅"
         title="Da el primer paso hoy"

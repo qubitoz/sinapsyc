@@ -731,3 +731,29 @@ export const googleReviews: GoogleReview[] = [
     text: "Excelente lugar para el apoyo de tu hijo. Personal muy capacitado y con ganas de ayudar. Calidad humana inmejorable.",
   },
 ];
+
+/**
+ * Etiquetas del blog relacionadas con cada programa. Sirve para cruzar
+ * "programa → artículos" sin duplicar contenido ni mantener listas de slugs.
+ */
+export const programBlogTags: Record<string, string[]> = {
+  "terapia-ocupacional": ["terapia ocupacional", "autonomía", "rutinas"],
+  "integracion-sensorial": [
+    "integración sensorial",
+    "procesamiento sensorial",
+    "regulación",
+  ],
+  "terapia-fisica": ["hitos del desarrollo", "señales de alerta"],
+  "terapia-alimentacion": ["alimentación", "selectividad alimentaria"],
+  "terapia-conductual": ["conducta", "TDAH", "habilidades sociales"],
+  "terapia-lenguaje": ["lenguaje", "estimulación en casa"],
+  "terapia-aprendizaje": ["escuela", "regreso a clases", "atención"],
+  "intervencion-temprana": [
+    "intervención temprana",
+    "señales de alerta",
+    "hitos del desarrollo",
+  ],
+  "evaluacion-neuropsicologica": ["valoración", "diagnóstico", "primera cita"],
+  "terapia-grupal": ["terapia grupal", "habilidades sociales", "juego"],
+  "clases-psicomotricidad": ["juego", "rutinas"],
+};

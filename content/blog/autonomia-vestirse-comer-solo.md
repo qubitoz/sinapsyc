@@ -4,7 +4,7 @@ date: "2026-07-25"
 excerpt: "Vestirse, comer o lavarse las manos son grandes conquistas para un niño. Te contamos cómo acompañar esos pasos sin prisa y celebrando cada avance."
 cover: "/img/blog-cover-autonomia.jpg"
 author: "Equipo Sinapsyc"
-category: "Autonomía"
+category: "Desarrollo Infantil"
 tags: ["autonomía", "terapia ocupacional", "rutinas", "consejos para padres"]
 ---
 

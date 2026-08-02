@@ -24,6 +24,7 @@ export default function TerminosPage() {
         ])}
       />
       <PageHero
+        crumbs={[{ name: "Inicio", path: "/" }, { name: "Términos y Condiciones", path: "/terminos" }]}
         eyebrow="Aspectos legales"
         emoji="📄"
         title="Términos y Condiciones"

@@ -1,4 +1,5 @@
 import { Container, Pill } from "./ui";
+import Breadcrumbs, { type Crumb } from "./Breadcrumbs";
 import { clsx } from "@/lib/clsx";
 
 export default function PageHero({
@@ -8,6 +9,7 @@ export default function PageHero({
   eyebrowClass = "bg-white/80 text-teal-600",
   tint = "teal",
   emoji,
+  crumbs,
 }: {
   eyebrow?: string;
   title: string;
@@ -15,6 +17,8 @@ export default function PageHero({
   eyebrowClass?: string;
   tint?: "teal" | "sky" | "sun" | "bubble";
   emoji?: string;
+  /** Migas de pan visibles, para orientar y enlazar hacia las secciones padre. */
+  crumbs?: Crumb[];
 }) {
   const tints: Record<string, string> = {
     teal: "from-teal-100 via-cream to-sky-brand-100",
@@ -26,6 +30,12 @@ export default function PageHero({
     <section className={clsx("relative overflow-hidden bg-gradient-to-br", tints[tint])}>
       <div className="dot-grid pointer-events-none absolute inset-0 opacity-40" aria-hidden />
       <Container className="relative py-14 text-center sm:py-20">
+        {crumbs && (
+          <Breadcrumbs
+            items={crumbs}
+            className="mb-6 flex justify-center [&_ol]:justify-center"
+          />
+        )}
         {eyebrow && (
           <Pill className={clsx("mb-4", eyebrowClass)}>
             {emoji && <span>{emoji}</span>}

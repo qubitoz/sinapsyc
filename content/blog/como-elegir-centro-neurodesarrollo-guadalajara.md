@@ -4,8 +4,8 @@ date: "2026-07-20"
 excerpt: "Elegir dónde acompañar a tu hijo es una de las decisiones más importantes. Aquí tienes una guía clara —y las preguntas correctas— para elegir con confianza en Guadalajara."
 cover: "/img/blog-cover-elegir-centro.jpg"
 author: "Equipo Sinapsyc"
-category: "Guía para padres"
-tags: ["Guadalajara", "elegir centro", "terapia infantil", "neurodesarrollo"]
+category: "Guía para Padres"
+tags: ["elegir centro", "Guadalajara", "valoración", "certificaciones"]
 ---
 
 Cuando notas que tu hijo necesita apoyo, aparece una pregunta grande: **¿a quién se lo confío?** En Guadalajara hay muchas opciones, y no todas trabajan igual. Esta guía te ayuda a elegir con cabeza y corazón, con las preguntas que de verdad importan.

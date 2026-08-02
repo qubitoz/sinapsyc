@@ -83,11 +83,13 @@ export function clinicSchema() {
     ],
     knowsLanguage: ["es-MX"],
     medicalSpecialty: ["Pediatric", "Physiotherapy", "SpeechPathology"],
+    // ParentAudience es el tipo correcto para "padres de niños de 0 a 8":
+    // childMinAge/childMaxAge describen a los hijos, no a la audiencia.
     audience: {
-      "@type": "PatientAudience",
+      "@type": "ParentAudience",
       audienceType: "Padres y madres de niños de 0 a 8 años",
-      suggestedMinAge: 0,
-      suggestedMaxAge: 8,
+      childMinAge: 0,
+      childMaxAge: 8,
     },
     availableService: programs.map((p) => ({
       "@type": "MedicalTherapy",
@@ -174,7 +176,7 @@ export function serviceSchema(program: Program) {
     provider: { "@id": CLINIC_ID },
     areaServed: { "@type": "City", name: "Guadalajara" },
     audience: {
-      "@type": "PatientAudience",
+      "@type": "PeopleAudience",
       audienceType: "Niños de 0 a 8 años",
       suggestedMinAge: 0,
       suggestedMaxAge: 8,
@@ -199,19 +201,88 @@ export function blogPostingSchema(post: Post | PostMeta) {
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    headline: post.title,
+    "@id": `${site.url}/blog/${post.slug}#article`,
+    // Google recorta el headline de los rich results cerca de 110 caracteres.
+    headline: post.title.slice(0, 110),
     description: post.excerpt,
     datePublished: post.date,
     dateModified: post.date,
     inLanguage: "es-MX",
-    mainEntityOfPage: `${site.url}/blog/${post.slug}`,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${site.url}/blog/${post.slug}`,
+    },
     ...(post.cover
-      ? { image: { "@type": "ImageObject", url: `${site.url}${post.cover}` } }
+      ? {
+          image: {
+            "@type": "ImageObject",
+            url: `${site.url}${post.cover}`,
+            width: 1280,
+            height: 720,
+          },
+        }
       : {}),
     author: { "@type": "Organization", name: post.author ?? site.name, url: site.url },
     publisher: { "@id": ORG_ID },
+    isPartOf: { "@type": "Blog", "@id": `${site.url}/blog#blog`, name: `Blog de ${site.name}` },
+    about: { "@id": CLINIC_ID },
     articleSection: post.category,
     keywords: post.tags?.join(", "),
+    timeRequired: `PT${post.readingTime}M`,
+  };
+}
+
+/** El blog completo, con sus artículos como entradas. */
+export function blogSchema(posts: PostMeta[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": `${site.url}/blog#blog`,
+    name: `Blog de ${site.name}`,
+    description:
+      "Artículos sobre neurodesarrollo infantil para familias: lenguaje, integración sensorial, conducta, alimentación y aprendizaje.",
+    url: `${site.url}/blog`,
+    inLanguage: "es-MX",
+    publisher: { "@id": ORG_ID },
+    blogPost: posts.map((p) => ({
+      "@type": "BlogPosting",
+      "@id": `${site.url}/blog/${p.slug}#article`,
+      headline: p.title.slice(0, 110),
+      description: p.excerpt,
+      datePublished: p.date,
+      url: `${site.url}/blog/${p.slug}`,
+      articleSection: p.category,
+      ...(p.cover ? { image: `${site.url}${p.cover}` } : {}),
+    })),
+  };
+}
+
+/** Página de archivo (categoría o etiqueta) con la lista de artículos. */
+export function collectionPageSchema(
+  name: string,
+  description: string,
+  path: string,
+  posts: PostMeta[]
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name,
+    description,
+    url: `${site.url}${path}`,
+    inLanguage: "es-MX",
+    isPartOf: { "@type": "Blog", "@id": `${site.url}/blog#blog` },
+    publisher: { "@id": ORG_ID },
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: posts.length,
+      itemListElement: posts.map((p, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: `${site.url}/blog/${p.slug}`,
+        name: p.title,
+      })),
+    },
   };
 }
 
@@ -225,8 +296,10 @@ export function medicalWebPageSchema(name: string, description: string, path: st
     inLanguage: "es-MX",
     about: { "@id": CLINIC_ID },
     audience: {
-      "@type": "PatientAudience",
+      "@type": "ParentAudience",
       audienceType: "Padres de niños de 0 a 8 años",
+      childMinAge: 0,
+      childMaxAge: 8,
     },
   };
 }

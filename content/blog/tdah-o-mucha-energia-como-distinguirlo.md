@@ -4,8 +4,8 @@ date: "2026-07-19"
 excerpt: "Todos los niños tienen energía, pero ¿cuándo la inquietud es algo más? Te ayudamos a distinguir, con calma, entre un temperamento activo y las señales que conviene valorar."
 cover: "/img/blog-cover-tdah.jpg"
 author: "Equipo Sinapsyc"
-category: "TDAH"
-tags: ["TDAH", "atención", "señales", "conducta"]
+category: "Conducta y Emociones"
+tags: ["TDAH", "atención", "conducta", "señales de alerta"]
 ---
 
 "Es que no se está quieto ni un segundo." Si esta frase te suena, no eres el único. Muchos papás se preguntan si su hijo simplemente **tiene mucha energía** o si hay algo que conviene valorar. La buena noticia: distinguirlo es posible, y hacerlo a tiempo abre caminos.

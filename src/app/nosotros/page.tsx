@@ -51,6 +51,7 @@ export default function NosotrosPage() {
         ]}
       />
       <PageHero
+        crumbs={[{ name: "Inicio", path: "/" }, { name: "Nosotros", path: "/nosotros" }]}
         eyebrow="Acerca de nosotros"
         emoji="🌟"
         title="Un equipo con un mismo propósito"

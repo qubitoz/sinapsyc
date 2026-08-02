@@ -4,8 +4,8 @@ date: "2026-07-10"
 excerpt: "Cada niño tiene su propio ritmo, y confiar en tu instinto de mamá o papá es el primer paso. Te contamos qué señales conviene observar y por qué identificarlas a tiempo abre caminos."
 cover: "/img/blog-cover-1.jpg"
 author: "Equipo Sinapsyc"
-category: "Desarrollo"
-tags: ["señales de alerta", "intervención temprana", "valoración"]
+category: "Desarrollo Infantil"
+tags: ["señales de alerta", "hitos del desarrollo", "intervención temprana", "valoración"]
 ---
 
 Como mamá o papá, conoces a tu hijo mejor que nadie. Esa intuición que te acompaña día a día es valiosa, y cuando algo te inquieta, escucharla es un acto de amor. Cada niño se desarrolla a su propio ritmo; sin embargo, hay señales que conviene observar con cariño y atención.

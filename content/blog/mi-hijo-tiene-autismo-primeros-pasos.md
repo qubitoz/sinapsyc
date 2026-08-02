@@ -5,7 +5,7 @@ excerpt: "Recibir un diagnóstico de autismo remueve muchas emociones. Respira: 
 cover: "/img/blog-cover-autismo.jpg"
 author: "Equipo Sinapsyc"
 category: "Autismo"
-tags: ["autismo", "diagnóstico", "primeros pasos", "TEA"]
+tags: ["autismo", "diagnóstico", "intervención temprana", "consejos para padres"]
 ---
 
 Si acabas de recibir un diagnóstico de autismo para tu hijo, es probable que sientas muchas cosas a la vez: amor, miedo, confusión, quizá un duelo por el camino que imaginabas. Queremos decirte algo con todo el corazón: **lo que sientes es válido, y no estás solo.** Muchas familias han estado justo donde estás hoy, y han encontrado calma, herramientas y esperanza.

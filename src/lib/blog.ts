@@ -76,3 +76,94 @@ export function formatDate(iso: string): string {
     year: "numeric",
   });
 }
+
+/* ---------------- Taxonomía: categorías y etiquetas ---------------- */
+
+/** Convierte "Integración Sensorial" en "integracion-sensorial". */
+export function slugify(value: string): string {
+  return value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "") // quita acentos
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+export type Term = { name: string; slug: string; count: number };
+
+function collect(values: (string | undefined)[]): Term[] {
+  const bySlug = new Map<string, Term>();
+  for (const v of values) {
+    if (!v) continue;
+    const slug = slugify(v);
+    const existing = bySlug.get(slug);
+    if (existing) existing.count += 1;
+    else bySlug.set(slug, { name: v, slug, count: 1 });
+  }
+  return [...bySlug.values()].sort(
+    (a, b) => b.count - a.count || a.name.localeCompare(b.name, "es")
+  );
+}
+
+export function getCategories(): Term[] {
+  return collect(getAllPosts().map((p) => p.category));
+}
+
+export function getTags(): Term[] {
+  return collect(getAllPosts().flatMap((p) => p.tags ?? []));
+}
+
+export function getPostsByCategory(slug: string): PostMeta[] {
+  return getAllPosts().filter((p) => p.category && slugify(p.category) === slug);
+}
+
+export function getPostsByTag(slug: string): PostMeta[] {
+  return getAllPosts().filter((p) =>
+    (p.tags ?? []).some((t) => slugify(t) === slug)
+  );
+}
+
+export function findTerm(terms: Term[], slug: string): Term | undefined {
+  return terms.find((t) => t.slug === slug);
+}
+
+/**
+ * Artículos relacionados: primero los que comparten más etiquetas y, si hacen
+ * falta, se completa con los más recientes de la misma categoría.
+ */
+export function getRelatedPosts(post: PostMeta, limit = 3): PostMeta[] {
+  const tags = new Set((post.tags ?? []).map(slugify));
+  const others = getAllPosts().filter((p) => p.slug !== post.slug);
+
+  const scored = others
+    .map((p) => ({
+      post: p,
+      shared: (p.tags ?? []).filter((t) => tags.has(slugify(t))).length,
+      sameCategory: p.category === post.category ? 1 : 0,
+    }))
+    .filter((s) => s.shared > 0 || s.sameCategory > 0)
+    .sort(
+      (a, b) =>
+        b.shared - a.shared ||
+        b.sameCategory - a.sameCategory ||
+        +new Date(b.post.date) - +new Date(a.post.date)
+    )
+    .map((s) => s.post);
+
+  const picked = scored.slice(0, limit);
+  if (picked.length < limit) {
+    for (const p of others) {
+      if (picked.length >= limit) break;
+      if (!picked.some((x) => x.slug === p.slug)) picked.push(p);
+    }
+  }
+  return picked;
+}
+
+/** Artículos que llevan cualquiera de las etiquetas dadas. */
+export function getPostsByTags(names: string[], limit = 3): PostMeta[] {
+  const wanted = new Set(names.map(slugify));
+  return getAllPosts()
+    .filter((p) => (p.tags ?? []).some((t) => wanted.has(slugify(t))))
+    .slice(0, limit);
+}

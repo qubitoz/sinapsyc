@@ -7,7 +7,15 @@ import remarkGfm from "remark-gfm";
 import { Container } from "@/components/ui";
 import CtaBand from "@/components/CtaBand";
 import BlogCard from "@/components/BlogCard";
-import { getAllPosts, getPost, getPostSlugs, formatDate } from "@/lib/blog";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import { CategoryChip, TagChips } from "@/components/TermChips";
+import {
+  getPost,
+  getPostSlugs,
+  getRelatedPosts,
+  formatDate,
+  slugify,
+} from "@/lib/blog";
 import JsonLd from "@/components/JsonLd";
 import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
 
@@ -57,41 +65,35 @@ export default async function BlogPostPage({
   const post = getPost(slug);
   if (!post) notFound();
 
-  const related = getAllPosts()
-    .filter((p) => p.slug !== slug)
-    .slice(0, 3);
+  // Relacionados por etiquetas compartidas, no por orden de publicación.
+  const related = getRelatedPosts(post, 3);
+  const crumbs = [
+    { name: "Inicio", path: "/" },
+    { name: "Blog", path: "/blog" },
+    ...(post.category
+      ? [
+          {
+            name: post.category,
+            path: `/blog/categoria/${slugify(post.category)}`,
+          },
+        ]
+      : []),
+    { name: post.title, path: `/blog/${post.slug}` },
+  ];
 
   return (
     <>
-      <JsonLd
-        data={[
-          blogPostingSchema(post),
-          breadcrumbSchema([
-            { name: "Inicio", path: "/" },
-            { name: "Blog", path: "/blog" },
-            { name: post.title, path: `/blog/${post.slug}` },
-          ]),
-        ]}
-      />
+      <JsonLd data={[blogPostingSchema(post), breadcrumbSchema(crumbs)]} />
 
       <article>
         {/* header */}
         <header className="relative overflow-hidden bg-gradient-to-br from-teal-100 via-cream to-bubble-100">
           <div className="dot-grid pointer-events-none absolute inset-0 opacity-40" aria-hidden />
           <Container className="relative py-12 sm:py-16">
-            <Link
-              href="/blog"
-              className="mb-6 inline-flex items-center gap-1 text-sm font-700 text-teal-600"
-            >
-              ← Volver al blog
-            </Link>
+            <Breadcrumbs items={crumbs} className="mb-6" />
             <div className="max-w-3xl">
               <div className="flex flex-wrap items-center gap-2 text-sm font-600 text-ink-soft">
-                {post.category && (
-                  <span className="rounded-full bg-white/80 px-3 py-1 text-teal-600">
-                    {post.category}
-                  </span>
-                )}
+                {post.category && <CategoryChip category={post.category} />}
                 <time dateTime={post.date}>{formatDate(post.date)}</time>
                 <span aria-hidden>·</span>
                 <span>{post.readingTime} min de lectura</span>
@@ -129,6 +131,38 @@ export default async function BlogPostPage({
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
               {post.content}
             </ReactMarkdown>
+          </div>
+
+          {/* Pie del artículo: temas y salida hacia el resto del sitio */}
+          <div className="mx-auto mt-12 max-w-2xl border-t border-teal-100 pt-8">
+            {post.tags && post.tags.length > 0 && (
+              <>
+                <h2 className="font-display text-lg font-600 text-ink">
+                  Temas de este artículo
+                </h2>
+                <TagChips tags={post.tags} className="mt-3" />
+              </>
+            )}
+            <div className="mt-8 rounded-3xl bg-teal-50 p-6">
+              <p className="text-[15px] leading-relaxed text-ink-soft">
+                ¿Te quedaste con dudas sobre tu pequeño? Conoce{" "}
+                <Link href="/programas" className="font-700 text-teal-600 underline">
+                  nuestros programas
+                </Link>
+                , revisa las{" "}
+                <Link
+                  href="/preguntas-frecuentes"
+                  className="font-700 text-teal-600 underline"
+                >
+                  preguntas frecuentes
+                </Link>{" "}
+                o{" "}
+                <Link href="/contacto" className="font-700 text-teal-600 underline">
+                  agenda una primera cita de valoración
+                </Link>
+                .
+              </p>
+            </div>
           </div>
         </Container>
       </article>

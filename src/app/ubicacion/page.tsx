@@ -30,6 +30,7 @@ export default function UbicacionPage() {
         ])}
       />
       <PageHero
+        crumbs={[{ name: "Inicio", path: "/" }, { name: "Ubicación", path: "/ubicacion" }]}
         eyebrow="Ubicación"
         emoji="📍"
         title="Te esperamos en Guadalajara"

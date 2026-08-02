@@ -4,8 +4,8 @@ date: "2026-07-16"
 excerpt: "El lenguaje florece en los momentos cotidianos: al jugar, al cocinar, al leer juntos. Imagina cuánto puede crecer tu pequeño con pequeños gestos diarios. Aquí tienes ideas prácticas para acompañarlo."
 cover: "/img/blog-cover-2.jpg"
 author: "Equipo Sinapsyc"
-category: "Lenguaje"
-tags: ["lenguaje", "estimulación", "consejos para padres"]
+category: "Lenguaje y Comunicación"
+tags: ["lenguaje", "estimulación en casa", "juego", "consejos para padres"]
 ---
 
 El hogar es el primer y más poderoso espacio de aprendizaje. Cada conversación, cada canción y cada cuento son ladrillos que construyen la comunicación de tu hijo. Y lo mejor es que no necesitas materiales especiales: solo tu presencia y algunos momentos de juego compartido.

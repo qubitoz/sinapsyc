@@ -25,6 +25,7 @@ export default function AvisoPrivacidadPage() {
         ])}
       />
       <PageHero
+        crumbs={[{ name: "Inicio", path: "/" }, { name: "Aviso de Privacidad", path: "/aviso-de-privacidad" }]}
         eyebrow="Aspectos legales"
         emoji="🔒"
         title="Aviso de Privacidad"

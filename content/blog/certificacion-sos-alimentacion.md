@@ -5,7 +5,7 @@ excerpt: "Si la hora de la comida se ha vuelto una lucha en casa, no estás solo
 cover: "/img/blog-cover-alimentacion.jpg"
 author: "Equipo Sinapsyc"
 category: "Alimentación"
-tags: ["alimentación", "certificación", "SOS", "selectividad alimentaria"]
+tags: ["alimentación", "certificaciones", "selectividad alimentaria"]
 ---
 
 Si cada comida se ha convertido en una negociación, si tu hijo rechaza texturas, colores o alimentos enteros, respira: **no estás haciendo nada mal** y no están solos. La alimentación es mucho más que nutrición; es una experiencia sensorial, motora y emocional. Por eso existe un enfoque especializado para acompañarla, y por eso nuestro equipo se certificó en él.

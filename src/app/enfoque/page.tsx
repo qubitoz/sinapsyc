@@ -45,6 +45,7 @@ export default function EnfoquePage() {
         ]}
       />
       <PageHero
+        crumbs={[{ name: "Inicio", path: "/" }, { name: "Nuestro Enfoque", path: "/enfoque" }]}
         eyebrow="Nuestro enfoque"
         emoji="🧩"
         title="Integral, interdisciplinario y centrado en el niño y la familia."
