@@ -18,13 +18,13 @@ export default function Footer() {
 
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 pb-10 pt-16 sm:px-8 md:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div>
-          <div className="inline-flex rounded-2xl bg-cream/95 px-3 py-2">
+          <div className="inline-flex rounded-2xl bg-cream/95 px-4 py-3">
             <Image
               src="/img/logo-sinapsyc.png"
-              alt="Sinapsyc"
-              width={160}
-              height={100}
-              className="h-10 w-auto"
+              alt="Sinapsyc — Neurodesarrollo Infantil"
+              width={1200}
+              height={239}
+              className="h-9 w-auto"
             />
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-cream/70">

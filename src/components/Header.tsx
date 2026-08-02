@@ -39,12 +39,13 @@ export default function Header() {
     >
       <nav className="mx-auto flex h-20 w-full max-w-6xl items-center justify-between px-5 sm:px-8">
         <Link href="/" className="flex items-center gap-2" aria-label="Sinapsyc inicio">
+          {/* Logo horizontal (≈5:1): alto contenido para no invadir el menú. */}
           <Image
             src="/img/logo-sinapsyc.png"
-            alt="Sinapsyc"
-            width={150}
-            height={94}
-            className="h-11 w-auto"
+            alt="Sinapsyc — Neurodesarrollo Infantil"
+            width={1200}
+            height={239}
+            className="h-8 w-auto sm:h-9"
             priority
           />
         </Link>

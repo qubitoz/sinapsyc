@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
-  icons: { icon: "/favicon.svg", apple: "/img/mascot-fox.jpg" },
+  icons: { icon: "/favicon.svg", apple: "/img/icon-sinapsyc.png" },
 };
 
 export default function RootLayout({
