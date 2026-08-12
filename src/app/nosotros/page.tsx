@@ -68,16 +68,14 @@ export default function NosotrosPage() {
               <div className="relative overflow-hidden rounded-[44px] bg-white p-3 shadow-2xl shadow-teal-500/10">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-[34px]">
                   <Image
-                    src={foto("revision_oral_casa_munecas")}
-                    alt="Terapeuta de Sinapsyc acompañando a un niño"
+                    src={foto("equipo-sinapsyc")}
+                    alt="El equipo de profesionales de Sinapsyc en el centro de neurodesarrollo infantil"
                     fill
                     sizes="(max-width: 1024px) 100vw, 460px"
                     className="object-cover"
+                    priority
                   />
                 </div>
-              </div>
-              <div className="absolute -bottom-4 -right-3 rotate-[-4deg] rounded-2xl bg-white px-4 py-2 font-display text-sm font-700 text-teal-600 shadow-lg">
-                Espacio cálido y seguro 💛
               </div>
             </Reveal>
             <Reveal delay={120}>

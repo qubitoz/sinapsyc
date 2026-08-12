@@ -58,7 +58,9 @@ export function clinicSchema() {
     url: site.url,
     telephone: "+52-33-3461-0814",
     email: site.email,
-    image: `${site.url}/img/hero-scene.jpg`,
+    // Foto real del equipo: Google prefiere imágenes auténticas del negocio
+    // antes que ilustraciones para los resultados locales.
+    image: `${site.url}/fotos/equipo-sinapsyc.jpg`,
     logo: {
       "@type": "ImageObject",
       "@id": LOGO_ID,
