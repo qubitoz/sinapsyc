@@ -7,7 +7,7 @@ import { clsx } from "@/lib/clsx";
 
 function Stars({ value = 5 }: { value?: number }) {
   return (
-    <div className="flex gap-0.5" aria-label={`${value} de 5 estrellas`}>
+    <div className="flex gap-0.5" role="img" aria-label={`${value} de 5 estrellas`}>
       {[1, 2, 3, 4, 5].map((i) => (
         <svg
           key={i}
@@ -121,17 +121,25 @@ export default function Testimonials() {
           >
             ‹
           </button>
-          <div className="flex flex-wrap justify-center gap-2">
+          {/* El área táctil es de 24px (mínimo accesible) aunque el punto se
+              vea pequeño: el <span> es lo visible, el <button> es el objetivo. */}
+          <div className="flex flex-wrap justify-center">
             {googleReviews.map((_, i) => (
               <button
                 key={i}
                 onClick={() => go(i)}
                 aria-label={`Ir a la reseña ${i + 1}`}
-                className={clsx(
-                  "h-2.5 rounded-full transition-all",
-                  i === index ? "w-7 bg-teal-500" : "w-2.5 bg-teal-200 hover:bg-teal-300"
-                )}
-              />
+                className="group flex h-6 items-center justify-center px-2"
+              >
+                <span
+                  className={clsx(
+                    "block h-2.5 rounded-full transition-all",
+                    i === index
+                      ? "w-7 bg-teal-500"
+                      : "w-2.5 bg-teal-200 group-hover:bg-teal-300"
+                  )}
+                />
+              </button>
             ))}
           </div>
           <button

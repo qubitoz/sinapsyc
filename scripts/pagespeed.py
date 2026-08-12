@@ -13,7 +13,7 @@ La clave de API se lee, en este orden, de:
 Sin clave la API pública se satura enseguida y responde 429.
 Conseguir una: https://developers.google.com/speed/docs/insights/v5/get-started
 """
-import json, os, sys, time, urllib.error, urllib.parse, urllib.request
+import json, os, shutil, subprocess, sys, time, urllib.parse
 
 SITE = os.environ.get("PAGESPEED_SITE", "https://sinapsyc.com")
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -38,6 +38,7 @@ def api_key():
 
 
 def run(url, strategy, key, tries=4):
+    """Se usa curl: urllib corta la conexión con respuestas grandes (>500 KB)."""
     params = {"url": url, "strategy": strategy, "category": CATS}
     if key:
         params["key"] = key
@@ -46,17 +47,23 @@ def run(url, strategy, key, tries=4):
     )
     delay = 15
     for attempt in range(tries):
+        proc = subprocess.run(
+            ["curl", "-s", "--max-time", "240", "--retry", "2", "--retry-delay", "5", api],
+            capture_output=True, text=True,
+        )
         try:
-            with urllib.request.urlopen(api, timeout=200) as r:
-                return json.load(r)
-        except urllib.error.HTTPError as e:
-            if e.code in (429, 500, 503) and attempt < tries - 1:
-                print(f"    ({e.code}; reintento en {delay}s)", flush=True)
-                time.sleep(delay)
-                delay *= 2
-            else:
-                print(f"    error {e.code}: {e.reason}")
-                return None
+            data = json.loads(proc.stdout)
+        except Exception:
+            data = None
+        if data and "error" not in data:
+            return data
+        msg = (data or {}).get("error", {}).get("message", "sin respuesta")[:80] if data else "sin respuesta"
+        if attempt < tries - 1:
+            print(f"    ({msg}; reintento en {delay}s)", flush=True)
+            time.sleep(delay)
+            delay *= 2
+        else:
+            print(f"    error: {msg}")
     return None
 
 

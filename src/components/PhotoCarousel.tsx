@@ -47,17 +47,24 @@ export default function PhotoCarousel({ photos }: { photos: Photo[] }) {
         </div>
       </div>
 
-      <div className="absolute bottom-4 right-4 flex gap-1.5 sm:bottom-6 sm:right-7">
+      {/* Área táctil de 24px alrededor de cada punto (mínimo accesible). */}
+      <div className="absolute bottom-2 right-3 flex sm:bottom-4 sm:right-6">
         {photos.map((_, i) => (
           <button
             key={i}
             onClick={() => setIndex(i)}
             aria-label={`Ir a la foto ${i + 1}`}
-            className={clsx(
-              "h-2.5 rounded-full transition-all",
-              i === index ? "w-7 bg-white" : "w-2.5 bg-white/50 hover:bg-white/80"
-            )}
-          />
+            className="group flex h-6 items-center justify-center px-1.5"
+          >
+            <span
+              className={clsx(
+                "block h-2.5 rounded-full transition-all",
+                i === index
+                  ? "w-7 bg-white"
+                  : "w-2.5 bg-white/50 group-hover:bg-white/80"
+              )}
+            />
+          </button>
         ))}
       </div>
     </div>
