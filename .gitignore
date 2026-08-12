@@ -43,3 +43,6 @@ next-env.d.ts
 # Local Claude Code tooling
 /.claude/*
 !/.claude/launch.json
+
+# Clave de PageSpeed (local, no se versiona)
+/.pagespeed-key
