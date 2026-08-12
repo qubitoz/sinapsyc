@@ -111,7 +111,7 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="flex w-full items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-4 font-display text-lg font-600 text-white shadow-lg shadow-[#25D366]/30 transition-transform hover:-translate-y-0.5 active:scale-[0.98]"
+        className="flex w-full items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-4 font-display text-lg font-600 text-ink shadow-lg shadow-[#25D366]/30 transition-transform hover:-translate-y-0.5 active:scale-[0.98]"
       >
         <WhatsAppIcon className="h-5 w-5" />
         Enviar por WhatsApp

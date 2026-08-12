@@ -77,7 +77,7 @@ export default function ContactoPage() {
                   rel="noopener noreferrer"
                   className="mt-4 flex items-center gap-3 rounded-2xl bg-[#25D366]/10 p-4 transition hover:bg-[#25D366]/15"
                 >
-                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#25D366] text-white">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#25D366] text-ink">
                     <WhatsAppIcon className="h-5 w-5" />
                   </span>
                   <span>

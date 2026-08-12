@@ -78,12 +78,12 @@ export default function UbicacionPage() {
                 </ul>
               </div>
 
-              <div className="rounded-[32px] bg-[#25D366] p-7 text-white shadow-lg shadow-[#25D366]/20">
+              <div className="rounded-[32px] bg-[#25D366] p-7 text-ink shadow-lg shadow-[#25D366]/20">
                 <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/20 text-2xl">
                   <WhatsAppIcon className="h-6 w-6" />
                 </span>
                 <h2 className="mt-4 font-display text-xl font-600">Escríbenos</h2>
-                <p className="mt-1 text-white/90">Nuestro medio de comunicación principal.</p>
+                <p className="mt-1 text-ink/80">Nuestro medio de comunicación principal.</p>
                 <a
                   href={waLink("¡Hola Sinapsyc! Me gustaría más información.")}
                   target="_blank"

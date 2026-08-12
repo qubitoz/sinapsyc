@@ -81,7 +81,7 @@ export default function Header() {
             )}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-2.5 font-display font-600 text-white shadow-lg shadow-[#25D366]/30 transition-transform hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-2.5 font-display font-600 text-ink shadow-lg shadow-[#25D366]/30 transition-transform hover:-translate-y-0.5"
           >
             <WhatsAppIcon className="h-4 w-4" />
             Agenda tu cita
@@ -154,7 +154,7 @@ export default function Header() {
               )}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 rounded-2xl bg-[#25D366] px-4 py-3 font-display font-600 text-white"
+              className="flex items-center justify-center gap-2 rounded-2xl bg-[#25D366] px-4 py-3 font-display font-600 text-ink"
             >
               <WhatsAppIcon className="h-5 w-5" />
               Agenda tu cita por WhatsApp

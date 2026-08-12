@@ -148,7 +148,7 @@ export default function AdmisionPage() {
                   href={waLink("¡Hola Sinapsyc! Me gustaría información sobre el proceso de admisión.")}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-3 font-display font-600 text-white"
+                  className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-3 font-display font-600 text-ink"
                 >
                   <WhatsAppIcon className="h-5 w-5" />
                   {site.phoneDisplay}

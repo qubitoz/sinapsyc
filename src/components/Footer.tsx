@@ -123,7 +123,7 @@ export default function Footer() {
             href={waLink("¡Hola Sinapsyc! Me gustaría agendar una cita.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-2.5 text-sm font-display font-600 text-white"
+            className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-2.5 text-sm font-display font-600 text-ink"
           >
             <WhatsAppIcon className="h-4 w-4" />
             {site.phoneDisplay}
@@ -132,7 +132,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-2 px-5 py-5 text-xs text-cream/50 sm:flex-row sm:px-8">
+        <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-2 px-5 py-5 text-xs text-cream/75 sm:flex-row sm:px-8">
           <p>
             © {new Date().getFullYear()} {site.name} · Neurodesarrollo Infantil.
             Todos los derechos reservados.

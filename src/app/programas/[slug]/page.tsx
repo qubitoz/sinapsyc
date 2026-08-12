@@ -122,7 +122,7 @@ export default async function ProgramPage({
                 )}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-7 py-3.5 font-display text-lg font-600 text-white shadow-lg shadow-[#25D366]/30 transition-transform hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-7 py-3.5 font-display text-lg font-600 text-ink shadow-lg shadow-[#25D366]/30 transition-transform hover:-translate-y-0.5"
               >
                 <WhatsAppIcon className="h-5 w-5" />
                 Agenda una cita
