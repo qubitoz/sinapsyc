@@ -63,7 +63,10 @@ export default function NosotrosPage() {
       <section className="py-16 sm:py-20">
         <Container>
           <div className="grid items-center gap-10 lg:grid-cols-2">
-            <Reveal className="relative mx-auto max-w-md">
+            {/* w-full es necesario: `mx-auto` hace que el elemento de grid se
+                encoja a su contenido, y la imagen con `fill` no aporta ancho,
+                así que sin esto el contenedor colapsa a 0. */}
+            <Reveal className="relative mx-auto w-full max-w-md">
               <div className="absolute inset-0 rotate-3 rounded-[44px] bg-sun-100" aria-hidden />
               <div className="relative overflow-hidden rounded-[44px] bg-white p-3 shadow-2xl shadow-teal-500/10">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-[34px]">
